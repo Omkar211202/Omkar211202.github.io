@@ -3,8 +3,7 @@ title: Marketing Management
 date:
   - 2024-11-11
 tags:
-  - MBA
-  - Mtg
+  - MBA01
 ---
 ## Marketing Introduction and Reality:
 

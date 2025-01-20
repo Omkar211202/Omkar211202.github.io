@@ -3,8 +3,7 @@ title: Statistics for Managers with Excel.
 date:
   - 2024-10-28
 tags:
-  - MBA
-  - Stats
+  - MBA01
 ---
 ## Basic Statistics and Excel:
 ### Excel Formulas:

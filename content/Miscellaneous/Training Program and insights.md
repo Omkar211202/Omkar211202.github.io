@@ -5,6 +5,8 @@ date:
 tags:
   - MBA
 ---
+## Handling Managerial  problems:
+
 1. A Team member speaks more but not with facts...
 -  Ask for details and the crucks and move on...
 -  OK agenda. (objectives and key results and actions)
@@ -51,13 +53,13 @@ tags:
 
 ---
 
-Personal Communication Hacks:
+## Personal Communication Hacks:
 1. facial expressions, body language and gestures:
 - 360 eye rotation and feeling the pulse.
 - eye for detail.
 1. keep it concise with data and numbers.
 
-4A technique:
+## 4A technique:
 - appreciate: best and used by all top leaders.
 - apologize: 
 - accountable:

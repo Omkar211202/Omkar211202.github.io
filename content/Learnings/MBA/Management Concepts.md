@@ -3,8 +3,7 @@ title: Management Concepts
 date:
   - 2024-11-07
 tags:
-  - MBA
-  - VBM
+  - MBA01
 ---
 ## Introduction:
 ### Definition:

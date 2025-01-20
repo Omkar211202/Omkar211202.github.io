@@ -3,7 +3,7 @@ title: Business Analytics 1
 date:
   - 2024-12-12
 tags:
-  - MBA
+  - MBA02
 ---
 
 ## Types of Analytics:
@@ -27,14 +27,6 @@ Types of scales
 - observations are placed in this table.
 - variables/dimensions: supplier, order no, item no etc.
 
-
-
-
-ACV laddering:
-- attributes.
-- consequences
-- value
-
 ---
 
 ## CRISP DM model:
@@ -52,44 +44,56 @@ ACV laddering:
 
 1. How to change appearance:
 - go to  Tools - global options - Appearance and change - apply.
+## Basics
 
-
-### Getting in touch:
+- put # for commenting in R.
+- `<-` may be used as an assignment operator to a var, `=` and `->` will also suffice the same.
+- `class()` may used to determine the datatype of the variable.
 
 ```R
-## Basics
-# how to print a string in R
-print("God is Great") 
-
+print("God is Great") # how to print a string in R
+ls() # Will list out all objects or variables created in memory.
+sample(x=1:4,size=4) # random function
+args(round) # will tell you the arguements the function will take.
+library(ggplot2) # how to use a package in R
 ```
 
 ```R
 # Some basic operations in R
-5*6
-1000/25
-sqrt(42)
+5*6        # Multipliation
+1000/25    # Division
+sqrt(42)   # Square root
+5%%6       # modulo operator
 ```
 
 ```R
-# Assigning a var in R
+# Assigning a variable in R
 x=42
 x
 
-```
-```R
 # sum function
 sum(2,3,4)
 
 # Repeats the value of an input
 rep(576,3)
 rep("Mdelighted",3)
+
+# Fstring in R
+library(glue)
+x=10
+glue("the mtcars dataset has {x} rows.")  ## a library in R called Glue
+
 ```
 
+## Vectors in R:
+
 ```R
-## Working with Vectors 
 ##Assigning a vector using C
 z=c(10,5,3)
 z
+
+# Joining vectors:
+c(a,b)
 
 # A vector may be passed as an input in another vector.
 pk=c(z,0.55,z)
@@ -120,12 +124,29 @@ vector+vector
 vector+1
 vector/2
 
+# summing two vectors of same len.(element wise operation)
+a+b
+
+# Poker winnings from Monday to Friday
+
+poker_vector <- c(140, -50, 20, -120, 240)
+
+names(roulette_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+
 ```
+
+
+## Matrix:
 
 ```R
 # creating a matrix (data, rows, col)
 x=matrix(1:8,4,2,byrow=TRUE) # puts data in row order
 x
+
+```R
+colnames(matrix) <- region
+
+rownames(matrix) <- titles
 
 # creating matrix using cbind
 cbind(c(1,2,3),c(4,5,6))
@@ -175,8 +196,13 @@ cyl_vol(height=10)
 
 ```
 
+### If statements.
 ```R
-
+x=5
+if (x<10)
+{
+  print(paste(x,"is lesser than 10"))
+}
 ```
 ### Handling datasets
 
@@ -225,6 +251,28 @@ x
 
 ```
 
+
+---
+
+## Plotting in R:
+
 ```R
+penguins
+lm(penguins$bill_length_mm~species+year+species::year,data=penguins)
+lm
+
+# boxplot
+p_box=ggplot(penguins,aes(x=species,y=bill_length_mm))+geom_boxplot()+labs(x="species",y="Bill_length_mm")
+p_box
+
+#Violin plot
+p_violin=ggplot(penguins,aes(x=species,y=bill_length_mm))+geom_violin()+labs(x="species",y="Bill_length_mm")
+p_violin
+
+# Patching up Plots
+p_box+p_violin & theme(axis.text.x = element_text(angle=45))
+
 
 ```
+
+---

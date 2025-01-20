@@ -3,8 +3,7 @@ title: Microeconomics
 date:
   - 2024-11-05
 tags:
-  - MBA
-  - Eco
+  - MBA01
 ---
 # Microeconomics:
 ## Terminology:

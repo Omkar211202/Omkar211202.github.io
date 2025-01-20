@@ -3,8 +3,7 @@ title: Accounts For Managers
 date:
   - 2024-10-31
 tags:
-  - MBA
-  - ACC
+  - MBA01
 ---
 ## Cashflow Stmt.
 

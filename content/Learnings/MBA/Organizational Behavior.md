@@ -3,8 +3,7 @@ title: Organizational Behavior
 date:
   - 2024-11-13
 tags:
-  - MBA
-  - OB
+  - MBA01
 ---
 ## Organizational Behavior:
 

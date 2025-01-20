@@ -3,8 +3,7 @@ title: Macroeconomics
 date:
   - 2024-11-05
 tags:
-  - MBA
-  - Eco
+  - MBA02
 ---
 ## National Income Accounting:
 

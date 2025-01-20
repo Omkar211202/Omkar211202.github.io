@@ -3,8 +3,7 @@ title: Business, Govt & Society
 date:
   - 2024-11-03
 tags:
-  - MBA
-  - BGS
+  - MBA01
 ---
 ## What's BGS ??
 
