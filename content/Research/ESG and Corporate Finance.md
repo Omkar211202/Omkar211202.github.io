@@ -20,7 +20,7 @@ image: /Resources/Research.jpg
 
 ### History of ESG:
 
-- started as EHS (Environment, Health and safety,1980's by UN)
+- started as EHS (Environment, Health and safety,19807's by UN)
 - Corporate Sustainability(1990's)
 - Corporate Social Responsibility.(early 2000's)
 - ESG.(2004 by UN)
