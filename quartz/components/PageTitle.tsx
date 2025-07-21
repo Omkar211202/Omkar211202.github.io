@@ -18,6 +18,7 @@ PageTitle.css = `
   font-size: 1.5rem;
   margin: 0;
   font-family: var(--titleFont);
+  color: var(--light);
 }
 `
 

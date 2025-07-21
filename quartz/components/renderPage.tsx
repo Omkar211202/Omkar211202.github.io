@@ -234,39 +234,39 @@ export function renderPage(
   const doc = (
     <html lang={lang}>
       <Head {...componentData} />
-      <body data-slug={slug}>
-        <div id="quartz-root" class="page">
-          <Body {...componentData}>
-            {LeftComponent}
-            <div class="center">
-              <div class="page-header">
-                <Header {...componentData}>
-                  {header.map((HeaderComponent) => (
-                    <HeaderComponent {...componentData} />
-                  ))}
-                </Header>
-                <div class="popover-hint">
-                  {beforeBody.map((BodyComponent) => (
-                    <BodyComponent {...componentData} />
-                  ))}
-                </div>
-              </div>
-              <Content {...componentData} />
-              <hr />
-              <div class="page-footer">
-                {afterBody.map((BodyComponent) => (
-                  <BodyComponent {...componentData} />
-                ))}
-              </div>
-            </div>
-            {RightComponent}
-            <Footer {...componentData} />
-          </Body>
+      <body data-slug={slug} style={{ position: "fixed", top: 0, left: 0, width: "100vw", height: "100vh", overflow: "auto" }}>
+      <div id="quartz-root" class="page">
+        <Body {...componentData}>
+        {LeftComponent}
+        <div class="center">
+          <div class="page-header">
+          <Header {...componentData}>
+            {header.map((HeaderComponent) => (
+            <HeaderComponent {...componentData} />
+            ))}
+          </Header>
+          <div class="popover-hint">
+            {beforeBody.map((BodyComponent) => (
+            <BodyComponent {...componentData} />
+            ))}
+          </div>
+          </div>
+          <Content {...componentData} />
+          <hr />
+          <div class="page-footer">
+          {afterBody.map((BodyComponent) => (
+            <BodyComponent {...componentData} />
+          ))}
+          </div>
         </div>
+        {RightComponent}
+        <Footer {...componentData} />
+        </Body>
+      </div>
       </body>
       {pageResources.js
-        .filter((resource) => resource.loadTime === "afterDOMReady")
-        .map((res) => JSResourceToScriptElement(res))}
+      .filter((resource) => resource.loadTime === "afterDOMReady")
+      .map((res) => JSResourceToScriptElement(res))}
     </html>
   )
 

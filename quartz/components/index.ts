@@ -26,6 +26,7 @@ import RenderExcalidraw from "./RenderExcalidraw"
 import Similar  from "./Similar"
 import { Og } from "./Customog"
 import Podcasts from "./Podcasts"
+import SideLogo from "./SideAnimation"
 
 export {
   ArticleTitle,
@@ -56,4 +57,5 @@ export {
   RenderExcalidraw,
   Similar,
   Podcasts,
+  SideLogo,
 }

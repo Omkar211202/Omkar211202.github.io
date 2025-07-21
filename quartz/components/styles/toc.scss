@@ -7,13 +7,12 @@
   border-radius: 0.5rem;
   padding: 0.5rem;
   flex: 0 1 auto;
-  min-height: 96px;
-
+  height: max-content;
   overflow-y: hidden;
-  min-height: 4rem;
   flex: 0 1 auto;
   &:has(button.toc-header.collapsed) {
     flex: 0 1 1.2rem;
+  scrollbar-width: thin;
   }
 }
 
@@ -29,7 +28,7 @@ button.toc-header {
   text-align: left;
   cursor: pointer;
   padding: 0;
-  color: var(--dark);
+  color: var(--light);
   display: flex;
   align-items: center;
 
@@ -37,16 +36,19 @@ button.toc-header {
     font-size: 1rem;
     display: inline-block;
     margin: 0;
+    color: var(--light);
   }
 
   & .fold {
     margin-left: 0.5rem;
     transition: transform 0.3s ease;
     opacity: 0.8;
+    color: var(--light);
   }
 
   &.collapsed .fold {
     transform: rotateZ(-90deg);
+    color: var(--light);
   }
 }
 
@@ -59,7 +61,7 @@ button.toc-header {
     margin: 0.5rem 0;
     padding: 0;
     & > li > a {
-      color: var(--dark);
+      color: var(--light);
       opacity: 0.35;
       transition:
         0.5s ease opacity,

@@ -36,12 +36,10 @@ export default ((opts?: Partial<BacklinksOptions>) => {
             backlinkFiles.slice(0,5).map((f) => (
               <li>
                 <div class="image-cont">
-                <a href={resolveRelative(fileData.slug!, f.slug!)} class="internal">
+                <a href={resolveRelative(fileData.slug!, f.slug!)} class="">
                 <img src={f.frontmatter?.image as string} alt={f.frontmatter?.title} height={75} width={100} />
                 <div class="recent-title">
-                
                   {f.frontmatter?.title}
-                
                 </div>
                 </a>
                 </div>
@@ -66,11 +64,9 @@ export default ((opts?: Partial<BacklinksOptions>) => {
   white-space: nowrap;
   scrollbar-width: thin;
   height: 35rem;
-  border: 2px solid var(--darkgray);
   border-radius: 0.5rem;
   padding: 5px;
-
-
+  width: fit-content;
 }
 
 .image-cont {
@@ -84,6 +80,10 @@ export default ((opts?: Partial<BacklinksOptions>) => {
   height: 100%;
   object-fit: cover;
 }
+
+.recent-title {
+  font-size: 0.8rem;
+  }
 
 `
   Similar.afterDOMLoaded = overflowListAfterDOMLoaded

@@ -17,7 +17,7 @@ draft: "false"
 - Pre-Trained: The Transformer was trained and is out on a release in the form of a transformer.
 - Transformer: Takes an input and gives an output. (See appendix Diagram 1).
 
-Key Research Paper of Architecture was kick started by Google: [Attention This is all you need]().
+Key Research Paper of Architecture was kick started by Google: [Attention This is all you need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf).
 
 ###  Encoding Phase:
 - Tokenize phase: Splitting the input into numbers or tokens for enabling further process for the computer.
@@ -84,3 +84,45 @@ In the Training phase, the loss ratio is looked out better fit the models. The o
 ## Appendix:
 
 [[How_does_gpt_work.excalidraw]]
+
+---
+
+1. Wrapped API service,
+2. API call with LLM's
+3. OpenAI standardised the api calling
+4. Multiple servers
+5. stateless: no memory
+6. System Prompt: USER, Role introduction
+7. sliding mechanism of memory to maintain memory
+8. efficiency and the cost also increases.
+
+RAG: retrieval augmented Generation- static data and 
+embedding models
+
+Dynamic data: tool usage and function calling.
+
+LLM gets only english and not embedding vectors.
+
+Limitations:
+- No proper response from Similarity search
+- Was not efficient
+- Context bloat
+
+Tool Calling:
+- LLM's work with code, API's.
+- Structure tool specs, description, tool list.
+- Executions are based on sequential calls.
+
+Model Context Protocol:
+- list of tools
+- Call tools.
+
+MCP client: contact the MCP server, list of tools available, description, input schema and the output schema.
+
+Requirement and features are taken care of by the business analyst.
+- BA: uses confluence to write.
+- Dev: JIRA (Task Management system to work for software's)
+- QA will uses user tasks and test accordingly.
+- Manual Testing and automation: playright, cucumber
+
+- 

@@ -12,7 +12,6 @@ Built by: [Omkar Kathi](https://www.linkedin.com/in/omkarkathi/),
 
 it comprises of various sections of content and notes:
 
-- [[Actuarial]]: Comprehensive coverage for Exam FM.
 - [[MBA]] Covers core concepts for managers in Finance, Marketing, Operation and Analytics.
 - [[TheTechie]]: A Deep Dive into AI and Web development
 - [[Research]]: Covers a systematic collection of concepts and tools in research.

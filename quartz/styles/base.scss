@@ -75,10 +75,6 @@ a {
   transition: color 0.2s ease;
   color: var(--secondary);
 
-  &:hover {
-    color: var(--tertiary) !important;
-  }
-
   &.internal {
     text-decoration: none;
     background-color: var(--highlight);
@@ -194,15 +190,18 @@ a {
       z-index: 1;
       grid-area: grid-sidebar-left;
       flex-direction: column;
+      background-color: var(--tertiary);
+      margin-right: 20px;
+      border-right: 2px solid white;
+      position: sticky;
       @media all and ($mobile) {
         gap: 0;
         align-items: center;
-        position: initial;
+        position: fixed;
         display: flex;
         height: unset;
         flex-direction: row;
         padding: 0;
-        padding-top: 2rem;
       }
     }
 
@@ -210,11 +209,18 @@ a {
       grid-area: grid-sidebar-right;
       margin-right: 0;
       flex-direction: column;
+      border-top-left-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+      border: 2px solid var(--dark);
+      margin-left: 20px;
+      padding: 0.5rem 0.5rem 0.5rem;
       @media all and ($mobile) {
         margin-left: inherit;
         margin-right: inherit;
+        border: none;;
       }
       @media all and not ($desktop) {
+
         position: initial;
         height: unset;
         width: 100%;
