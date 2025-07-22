@@ -10,6 +10,7 @@ export const sharedPageComponents: SharedLayout = {
       component: Component.RecentNotes(),
       condition: (page) => page.fileData.slug == "index",
     }),
+    Component.Graph(),
 ],
   footer: Component.Footer({
     links: {
