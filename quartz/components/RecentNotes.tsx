@@ -45,7 +45,7 @@ export default ((userOpts?: Partial<Options>) => {
           {notes.slice(0, opts.limit).map((page) => {
             const title = page.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
             const tags = page.frontmatter?.tags ?? []
-            const photo = page.frontmatter?.image || "./Root.jpg"
+            const photo = page.frontmatter?.image || "/Resources/Root.jpg"
             return (
               <li class="recent-li horizontal-li">
                 <div class="section">

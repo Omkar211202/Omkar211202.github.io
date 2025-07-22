@@ -1,15 +1,14 @@
 ---
-title: BlackBox
+title: Om's Notes
 date:
   - 2024-10-27
 image: /Resources/Root.jpg
 ---
-## Welcome to Black Box:
+[[logo.excalidraw]]
 
-Black Box is a comprehensive collection of ideas, content and notes. 
+This is a comprehensive collection of ideas, content and notes. 
 
 Built by: [Omkar Kathi](https://www.linkedin.com/in/omkarkathi/),
-
 it comprises of various sections of content and notes:
 
 - [[MBA]] Covers core concepts for managers in Finance, Marketing, Operation and Analytics.

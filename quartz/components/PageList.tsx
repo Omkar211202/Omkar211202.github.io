@@ -49,7 +49,7 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
       {list.map((page) => {
         const title = page.frontmatter?.title ?? ""
         const tags = page.frontmatter?.tags ?? []
-        const image = page.frontmatter?.image ?? "../Root.jpg"
+        const image = page.frontmatter?.image ?? "/Resources/Root.jpg"
         return (
           <li class="section-li">
           <a href={resolveRelative(fileData.slug!, page.slug!)}>
