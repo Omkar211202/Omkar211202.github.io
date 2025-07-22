@@ -27,11 +27,13 @@ import Similar  from "./Similar"
 import { Og } from "./Customog"
 import Podcasts from "./Podcasts"
 import SideLogo from "./SideAnimation"
+import {Alltags} from "./Alltags"
 
 export {
   ArticleTitle,
   Content,
   Og,
+  Alltags,
   TagContent,
   FolderContent,
   Darkmode,

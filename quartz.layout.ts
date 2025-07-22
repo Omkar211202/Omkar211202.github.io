@@ -63,9 +63,14 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.ConditionalRender({
+      component: Component.Alltags,
+      condition: (page) => page.fileData.slug == "index",
+    }),
+    Component.ConditionalRender({
       component: Component.Similar(),
       condition: (page) => page.fileData.slug !== "index",
     }),
+
     Component.Backlinks(),
   ],
 }
@@ -87,5 +92,7 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer(),
   ],
-  right: [],
+  right: [
+    Component.DesktopOnly(Component.Alltags),
+  ],
 }
