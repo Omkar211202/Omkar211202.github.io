@@ -38,7 +38,21 @@ export default (() => {
 
     return (
       <head>
-        <iframe width="540" height="305" src="https://111cded6.sibforms.com/serve/MUIFAJlfZTZoXejC5Fej0ifUXeYmDN1_2Wj4j-wqTGT93ol6M05C1c-iMoQjpaoAUtFo3ZvKvOPjYTWSZt5ji4AMhBPgk2PXAMg-YZuYrDt0AmQC5oM4MHtYfxtWvxHSDxIYM06rmBCL2-3tNIqNzBy0bDj1Vt9qX37XeAr6O-ZftdPBn8EZcGywLO106GRDqvi1CnrxT-f5-srw"></iframe>
+<script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
+<script
+  dangerouslySetInnerHTML={{
+    __html: `
+      // Version: 2.0
+      window.Brevo = window.Brevo || [];
+      Brevo.push([
+        "init",
+        {
+          client_key: "rg72st2an8w54jiojkpgetcx"
+        }
+      ]);
+    `,
+  }}
+/>
         <title class="title" style={{ fontSize: "0.5rem" }}>{title}</title>
         <meta charSet="utf-8" />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
