@@ -74,7 +74,6 @@ export const Alltags: QuartzComponent = ({ cfg, allFiles, limit, sort }: Props) 
   
 Alltags.css = `
 .alltags{
- margin-top: 200px; 
 }
 
 .gr {

@@ -64,7 +64,7 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.ConditionalRender({
-      component: Component.Alltags,
+      component: Component.DesktopOnly(Component.Alltags),
       condition: (page) => page.fileData.slug == "index",
     }),
     Component.ConditionalRender({
