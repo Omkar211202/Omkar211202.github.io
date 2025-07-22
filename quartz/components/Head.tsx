@@ -38,7 +38,6 @@ export default (() => {
 
     return (
       <head>
-        <iframe width="540" height="305" src="https://111cded6.sibforms.com/serve/MUIFACVnsB5kOxTnNE9vJzDF849trAD7UlB8ELUkcyKSrhbTW_9vz01ebSmpLB64DEx4WhjIkSARmbsGLCremJNLM1ILJqzXb6p8SMgboFkdAMBH-7G6DJ3TCI__9qxiOH0uSW9HpxrrJG0lvavkaec436AZ7pfJ2ysn1AeqCYsBCW5b-YWidFadJETHd8Xxjmynax_nZUQmgtrS" allowFullScreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
         <title class="title" style={{ fontSize: "0.5rem" }}>{title}</title>
         <meta charSet="utf-8" />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
