@@ -38,22 +38,23 @@ export default (() => {
 
     return (
       <head>
+      
+<script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
+<script
+  dangerouslySetInnerHTML={{
+    __html: `
+      // Version: 2.0
+      window.Brevo = window.Brevo || [];
+      Brevo.push([
+        "init",
+        {
+          client_key: "1rbfa09ek9vocn2hyq9hgxci"
+        }
+      ]);
+    `,
+  }}
+></script>
 
-      <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            // Version: 2.0
-            window.Brevo = window.Brevo || [];
-            Brevo.push([
-              "init",
-              {
-                client_key: "1rbfa09ek9vocn2hyq9hgxci"
-              }
-            ]);
-          `,
-        }}
-      />
 
         <title class="title" style={{ fontSize: "0.5rem" }}>{title}</title>
         <meta charSet="utf-8" />
