@@ -31,6 +31,9 @@ type ContentMap = Map<
   | {
       type: "other"
     }
+  | {
+      type: "html"
+    }
 >
 
 type BuildData = {
@@ -88,6 +91,18 @@ async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
   console.log(
     styleText("green", `Done processing ${markdownPaths.length} files in ${perf.timeSince()}`),
   )
+  // Rename brevo-frame to brevo-frame.html after build
+  const fs = await import("fs/promises")
+  const brevoFramePath = path.join(output, "brevo-frame")
+  const brevoFrameHtmlPath = path.join(output, "brevo-frame.html")
+  try {
+    await fs.rename(brevoFramePath, brevoFrameHtmlPath)
+  } catch (err) {
+    // Ignore if file doesn't exist
+    if ((err as NodeJS.ErrnoException).code !== "ENOENT") {
+      console.error("Error renaming brevo-frame:", err)
+    }
+  }
   release()
 
   if (argv.watch) {
@@ -222,7 +237,7 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
 
     // manually track non-markdown files as processed files only
     // contains markdown files
-    if (change === "add" && path.extname(file) !== ".md") {
+    if (change === "add" && path.extname(file) !== ".md" && path.extname(file) !== ".html") {
       contentMap.set(file as FilePath, {
         type: "other",
       })

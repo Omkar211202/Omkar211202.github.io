@@ -8,6 +8,7 @@
   },
   "keywords": [],
   "author": "",
+  "postbuild": "mv ./public/brevo-frame ./public/brevo-frame.html",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
