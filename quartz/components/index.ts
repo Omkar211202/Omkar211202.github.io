@@ -28,6 +28,7 @@ import { Og } from "./Customog"
 import Podcasts from "./Podcasts"
 import SideLogo from "./SideAnimation"
 import {Alltags} from "./Alltags"
+import Quotes from "./Quotes"
 
 export {
   ArticleTitle,
@@ -60,4 +61,5 @@ export {
   Similar,
   Podcasts,
   SideLogo,
+  Quotes
 }
