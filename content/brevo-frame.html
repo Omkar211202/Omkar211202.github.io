@@ -13,6 +13,18 @@
       font-family: sans-serif;
     }
   </style>
+    <script>
+    // Rename brevo-frame to brevo-frame.html after build (Node.js example)
+    if (typeof window === 'undefined') {
+      const fs = require('fs');
+      const path = require('path');
+      const oldPath = path.join(__dirname, 'brevo-frame');
+      const newPath = path.join(__dirname, 'brevo-frame.html');
+      if (fs.existsSync(oldPath) && !fs.existsSync(newPath)) {
+        fs.renameSync(oldPath, newPath);
+      }
+    }
+  </script>
 </head>
 
 <body>

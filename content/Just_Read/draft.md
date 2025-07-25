@@ -2,7 +2,4 @@
 title: draft
 draft: "true"
 ---
-![[brevo-frame.html]]
-
-![[sw.js]]
-
+![[google30ea7461aa0dbb52.html]]

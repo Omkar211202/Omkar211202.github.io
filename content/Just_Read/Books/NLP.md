@@ -3,7 +3,7 @@ title: Intro to NLP
 tags:
   - Books
 date:
-  - 2025-07-16
+  - 2025-07-24
 ---
 ## Key Lesson's from Neuro-Linguistic Programming:
 

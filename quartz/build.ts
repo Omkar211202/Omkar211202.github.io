@@ -93,8 +93,8 @@ async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
   )
   // Rename brevo-frame to brevo-frame.html after build
   const fs = await import("fs/promises")
-  const brevoFramePath = path.join(output, "brevo-frame")
-  const brevoFrameHtmlPath = path.join(output, "brevo-frame.html")
+  const brevoFramePath = path.join(output, "google30ea7461aa0dbb52")
+  const brevoFrameHtmlPath = path.join(output, "google30ea7461aa0dbb52.html")
   try {
     await fs.rename(brevoFramePath, brevoFrameHtmlPath)
   } catch (err) {
