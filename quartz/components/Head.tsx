@@ -58,6 +58,10 @@ export default (() => {
 
         <title class="title" style={{ fontSize: "0.5rem" }}>{title}</title>
         <meta charSet="utf-8" />
+        <meta
+          name="keywords"
+          content="omkar, omkar kathi, MBA notes, MBA, Tech, Spirituality, books reader"
+        />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
           <>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
