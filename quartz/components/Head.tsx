@@ -68,7 +68,7 @@ export default (() => {
         />
         <link rel="canonical" href={`https://${cfg.baseUrl ?? "example.com"}/${fileData.slug ?? ""}`} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE" />
+        <meta name="google-site-verification" content="G-NTDFQPY9XY" />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
           <>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
