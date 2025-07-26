@@ -4,7 +4,7 @@ date:
   - 2025-02-04
 tags:
   - Techie
-draft: false
+draft: "false"
 image: /Resources/tech.jpg
 ---
 ## How does ChatGPT Work???
@@ -19,7 +19,7 @@ The following is the architecture used in building LLM's:
 
 The below are few characteristics of LLM's:
 
-- They have no memory of their own.
+- They have no memory of their own. Its called the `Stateless` property.
 
 IMPLICATION: If you ask an LLM running in a system continuously, the LLM will not be able to answer the leading questions, as it would have forgotten the previous question asked (it does not remember the prior question).
 This makes these LLM's Scalable, it the responsibility of the client application to store questions asked priorly and the answers given by the LLM and refeed it back to the LLM when a new question is asked, thus can making the entire process scalable. 
@@ -66,7 +66,7 @@ poetry self add poetry-plugin-export
 poetry shell
 ```
 
-- enter the Venv, and install the following dependencies.
+- You have to enter virtual environment and install the dependencies (figure out this)
 
 ```sh
 poetry add chromadb langchain openai fastapi uvicorn
@@ -108,7 +108,6 @@ print("Query Results:", results)
 
 Once, your Chroma Db is setup, you can write the following code:
 ```python
-  
 
 import os
 from dotenv import load_dotenv
@@ -121,126 +120,241 @@ from langchain.chat_models import ChatOpenAI
 # Load API key from .env
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-  
 
 if not OPENAI_API_KEY:
     raise ValueError("Missing OpenAI API Key. Set it in .env file.")
 
-# Step 1: Load PDF and process it
-pdf_path = "T.pdf"  # Replace with actual PDF path
-loader = PyPDFLoader(pdf_path)
-documents = loader.load()
-
-# Step 2: Split text into chunks for embedding storage
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
-chunks = text_splitter.split_documents(documents)
-
-# Step 3: Create ChromaDB Vector Store
-vector_store = Chroma.from_documents(
-    documents=chunks,
-    embedding=OpenAIEmbeddings()  # Using OpenAI's embedding model
-)
+# === Constants ===
+PERSIST_DIRECTORY = "chromadb_store"
+PDF_PATH = "T.pdf"  # Replace with dynamic path if needed
 
   
 
-# Step 4: Initialize OpenAI Chat Model
-llm = ChatOpenAI(model_name="gpt-4", temperature=0)
-# Step 5: Chat loop to query the knowledge base
-print("\nInstitute GPT is ready! Ask questions based on the PDF (type 'exit' to quit).")
+# === Step 1: Load and chunk PDF ===
+loader = PyPDFLoader(PDF_PATH)
+documents = loader.load()
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
+chunks = text_splitter.split_documents(documents)
 
+# === Step 2: Setup Embeddings ===
+embedding = OpenAIEmbeddings()
+
+
+# === Step 3: Create (ChromaDb doesnot exist) or Load Chroma Vector Store (Loading only if the Db exists) ===
+if os.path.exists(PERSIST_DIRECTORY):
+    print("Loading existing Chroma DB...")
+    vector_store = Chroma(persist_directory=PERSIST_DIRECTORY, embedding_function=embedding)
+    vector_store.add_documents(chunks)
+
+else:
+    print("Creating new Chroma DB...")
+    vector_store = Chroma.from_documents(
+        documents=chunks,
+        embedding=embedding,
+        persist_directory=PERSIST_DIRECTORY,
+    )
+
+# Persist DB to disk
+vector_store.persist()
+
+  
+# === Step 4: Setup LLM ===
+llm = ChatOpenAI(model_name="gpt-4", temperature=0)
+
+# === Step 5: Chat Loop ===
+
+print("\nInstitute GPT is ready! Ask questions based on the PDF (type 'exit' to quit).")
 while True:
     query = input("\nAsk a question: ")
     if query.lower() == "exit":
         break
-# Retrieve top matching document chunks
-    search_results = vector_store.similarity_search(query, k=3)  # Get top 3 matches
+
+    search_results = vector_store.similarity_search(query, k=3)
     retrieved_texts = "\n\n".join([doc.page_content for doc in search_results])
 
-  
-# Format the prompt
     prompt = f"Use the following institute-related information to answer the question:\n\n{retrieved_texts}\n\nQuestion: {query}\n\nAnswer:"
-
-  
-# Get response from GPT
+    
     response = llm.invoke(prompt)
+
     print("\nAnswer:", response.content)
 ```
 
+Any Input PDF or static data is converted into Chunks using Embeddings and stored in the database based on similarity and relatedness. When a query is asked, a similarity search is done to find relevant chunks that are passed on the LLM for writing the output.
+
+---
+
+## Tool or Function Calling:
+
+Sometimes we may want to play with data, data i.e. dynamic changes everyday, and we need to make inference from that. Thus, Programmers have developed the concept of `API calls` to collect data from various providers. This is also called a Wrapped Ai service.
+
+Generally this `API calls` were hard coded into the system via strict coding. But with AI coming into the area of programming, this has been taken to a next level.
+
+- Dynamic data can be embedded into AI models with `Functional Calling` .
+- Today when we have multiple functions, and we need to obtain some output, we have to call the functions in a sequential order. Lets say I want to know the weather in Bangalore, and there are two functions.
+- Function 1 gives the latitudes and longitudes of an inputted city and Function 2 gives the weather conditions given the latitudes and longitudes.
+- So when we do Function calling, the LLM helps us to run these functions in the sequential order so as to obtain the output finally.
+- The uniqueness in the entire process is that it is not hard coded into the system, and its LLM that is deciding the order.
+
+Below is an implementation of Tool or function calling:
+
+```python
+import os
+import json
+import requests
+from dotenv import load_dotenv
+from datetime import datetime
+
+from langchain_core.tools import tool
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import SystemMessage, HumanMessage, ToolMessage
+
+load_dotenv()
+model = os.getenv('LLM_MODEL', 'gpt-4o')
+weather_api_key = os.getenv("WEATHER_API_KEY")
+
+
+"""
+The following is the procedure to define functions for tool calling.
+The function must have a commented description to tell the AI model what it can do.
+Then the definition of the function follows.
+"""
+# Tool 1: Get latitude and longitude from city name
+@tool  # This is a decorator
+def get_lat_lon_from_city(city: str):
+
+    """
+
+    Converts a city name to its latitude and longitude using OpenWeatherMap Geocoding API.
+
+    """
+
+    try:
+        url = f"http://api.openweathermap.org/geo/1.0/direct?q={city}&limit=1&appid={weather_api_key}"
+        response = requests.get(url).json()
+        if response.status_code != 200:
+            return f"Error getting location: {response.status_code} - {response.text}"
+        data = response.json()
+        print(data)
+        if not data:
+            return f"Could not find coordinates for {city}"
+
+        lat = data[0]["lat"]
+        lon = data[0]["lon"]
+        return json.dumps({"latitude": lat, "longitude": lon})
+
+    except Exception as e:
+        return f"Error during geocoding: {str(e)}"
+
+  
+
+# Tool 2: Get weather from lat/lon
+
+@tool
+def get_weather_by_lat_lon(latitude: float, longitude: float):
+    """
+    Fetches current weather for given coordinates using OpenWeatherMap API.
+    """
+    try:
+        url = f"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={weather_api_key}&units=metric"
+        response = requests.get(url)
+        if response.status_code != 200:
+            return f"Weather API error: {response.status_code} - {response.text}"
+        data = response.json()
+        weather = data["weather"][0]["description"]
+        temperature = data["main"]["temp"]
+        location = data.get("name", f"({latitude}, {longitude})")
+        return f"The current weather in {location} is '{weather}' with a temperature of {temperature}°C."
+
+    except Exception as e:
+        return f"Error fetching weather: {str(e)}"
+
+  
+
+# Recursive AI prompting
+"""
+The following function does all the computation.
+When the user sends his first message (look below for the code), the prompt_ai function is called.
+1. At first, the model is intialised and tools are binded. When the messages are sent to the Model, the model responds.
+2. The Message from the Model is a guide for the sequential order of functions to be called, inorder to obtain the desired function.
+3. Upon compeleting all the functions in the tools in the ai_response, the entire messages containing all the user prompts, function outputs are fed into the model to obtain the fincal output.
+"""
+def prompt_ai(messages, nested_calls=0):
+    if nested_calls > 5:
+        raise Exception("AI is tool-calling too much!")
+
+    tools = [get_lat_lon_from_city, get_weather_by_lat_lon]
+    ai = ChatOpenAI(model=model)
+    ai_with_tools = ai.bind_tools(tools)
+    ai_response = ai_with_tools.invoke(messages)
+
+
+    if hasattr(ai_response, "tool_calls") and len(ai_response.tool_calls) > 0:
+        messages.append(ai_response)
+        
+        for tool_call in ai_response.tool_calls:
+            tool_name = tool_call["name"]
+            tool_args = tool_call["args"]
+
+            # Choose tool function
+            tool_func = next(t for t in tools if t.name == tool_name)
+            print(f"[TOOL INVOKED] {tool_name} with args {tool_args}")
+
+            tool_output = tool_func.invoke(tool_args)
+            messages.append(ToolMessage(tool_output, tool_call_id=tool_call["id"]))
+        return prompt_ai(messages, nested_calls + 1)
+    return ai_response
+
+  
+
+# Main interaction loop
+
+def main():
+
+# System Prompt defines what the AI Model is helping in, the user prompt is given by the user to use the functionality to obtain solutions.
+    messages = [
+        SystemMessage(content=f"You are a weather assistant. You can answer questions about weather for a given city name or latitude/longitude. Today's date is {datetime.now().date()}.")
+    while True:
+        user_input = input("Ask about the weather (q to quit): ").strip()
+        if user_input.lower() == 'q':
+            break
+        messages.append(HumanMessage(content=user_input))
+        ai_response = prompt_ai(messages)
+        print("\nAssistant:", ai_response.content)
+        messages.append(ai_response)
+
+  
+
+if __name__ == "__main__":
+
+    main()
+```
+
+
+
+
+---
+
+## Model Context Protocol:
+
+- The latest development in the field of AI Agents in MCP or Model context protocol.
+- The bottleneck in tool calling is that it has to be done locally for each project it is used in, that too in a non-standard way.
+- AI companies have thus started running the MCP servers, that contain all the functions that are related to context of functionality, example an Amazon MCP server will have the functions like Price calls, Quantity available, highest sold etc. defined centrally and can be accessed by all with ease.
+- Thus, MCP servers give the list of functions available to local machine, which sends the same to the model.
+- Upon receiving the sequential order of functions, the local sends the order, the functions are then run in the MCP servers and output is given back to the local machine which sends it to the LLM model.
+
+---
+
+## Other important learnings:
+
+- operations on data will generally: create, read, update, delete, transform or filter data from one form to another,
+
+To read and watch out: 
+- [MCP](https://maximilian-schwarzmueller.com/articles/whats-the-mcp-model-context-protocol-hype-all-about/)
+- [coleam00 ai agents](https://www.youtube.com/watch?v=zaNIvRllycM&list=PLyrg3m7Ei-MpsdEA6eKN1k2gJpuhllNTi)
+- [Blog by Langchain](https://blog.langchain.com/how-to-build-an-agent/)
+
 ---
 
 
-## Data handling:
-1. Create
-2. Read
-3. Update
-4. Delete
-5. Transform
-6. Filter
 
 
-[https://maximilian-schwarzmueller.com/articles/whats-the-mcp-model-context-protocol-hype-all-about/](https://maximilian-schwarzmueller.com/articles/whats-the-mcp-model-context-protocol-hype-all-about/)
-
-Prompts:
-- system: tool.
-- user
-
-Advantages:
-- Describe the API and use the latest info.
-
-
-
-Disadvantages:
-- Time taking.
-- many tools, the computation will long.
-- the format will change with time.
-
-MODEL CONTEXT PROTOCOL:
-- Standardizes the way in which the server and LLM interact.
-- Describe tools, prompt and assistant in a standard way.
-
-### use case:
-dev
-ingest of data
-user use.
-
-### coleam00 ai agents
-[https://www.youtube.com/watch?v=zaNIvRllycM&list=PLyrg3m7Ei-MpsdEA6eKN1k2gJpuhllNTi](https://www.youtube.com/watch?v=zaNIvRllycM&list=PLyrg3m7Ei-MpsdEA6eKN1k2gJpuhllNTi)
-
----
-1. Wrapped API service,
-2. API call with LLM's
-3. OpenAI standardised the api calling
-4. Multiple servers
-5. stateless: no memory
-6. System Prompt: USER, Role introduction
-7. sliding mechanism of memory to maintain memory
-8. efficiency and the cost also increases.
-
-RAG: retrieval augmented Generation- static data and 
-embedding models
-
-Dynamic data: tool usage and function calling.
-
-LLM gets only english and not embedding vectors.
-
-Limitations:
-- No proper response from Similarity search
-- Was not efficient
-- Context bloat
-
-Tool Calling:
-- LLM's work with code, API's.
-- Structure tool specs, description, tool list.
-- Executions are based on sequential calls.
-
-Model Context Protocol:
-- list of tools
-- Call tools.
-
-MCP client: contact the MCP server, list of tools available, description, input schema and the output schema.
-
-Requirement and features are taken care of by the business analyst.
-- BA: uses confluence to write.
-- Dev: JIRA (Task Management system to work for software's)
-- QA will uses user tasks and test accordingly.
-- Manual Testing and automation: playright, cucumber

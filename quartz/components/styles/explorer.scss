@@ -30,7 +30,7 @@
 .explorer {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: var(--dark);
   overflow-y: hidden;
   border: 2px solid var(--lightgray);
   border-radius: 0.5rem;
@@ -129,6 +129,9 @@ button.desktop-explorer {
     padding: 0;
 
     & li > a {
+       @media all and ($mobile) {
+        color: var(--dark);
+       }
       color: var(--light);
       opacity: 0.75;
       pointer-events: all;
@@ -289,3 +292,5 @@ html:has(.no-scroll) {
     overflow: auto !important;
   }
 }
+
+

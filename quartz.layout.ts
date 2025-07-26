@@ -33,7 +33,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ContentMeta(),
     Component.TagList(),
     Component.MobileOnly(Component.Podcasts()),
-
   ],
   left: [
     Component.PageTitle(),
