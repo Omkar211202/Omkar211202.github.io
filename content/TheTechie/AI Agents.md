@@ -1,9 +1,10 @@
 ---
-title: Running an LLM on Local Systems
+title: Building AI Agents
 date:
   - 2025-02-04
 tags:
   - Techie
+  - AI
 draft: "false"
 image: /Resources/tech.jpg
 ---
