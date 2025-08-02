@@ -149,7 +149,7 @@ declare module "vfile" {
         lang: string
         enableToc: string
         cssclasses: string[]
-        socialImage: string
+        image: string
         comments: boolean | string
       }>
   }
