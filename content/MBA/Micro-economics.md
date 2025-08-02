@@ -6,6 +6,7 @@ tags:
   - MBA01
   - MBA
 image: /Resources/MBA.jpg
+keywords: microeconomics basics, supply demand equilibrium, price elasticity concepts, consumer choice theory, firm cost analysis, microeconomic market structures, utility maximization
 ---
 # Microeconomics:
 ## Terminology:

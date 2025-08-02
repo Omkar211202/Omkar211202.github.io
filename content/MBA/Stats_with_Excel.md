@@ -6,6 +6,7 @@ tags:
   - MBA01
   - MBA
 image: /Resources/MBA.jpg
+keywords: Excel statistics tutorial, managerial statistics Excel, data analysis Excel MBA, hypothesis testing Excel, regression analysis Excel guide, statistical functions Excel, probability distributions Excel
 ---
 ## Basic Statistics and Excel:
 ### Excel Formulas:

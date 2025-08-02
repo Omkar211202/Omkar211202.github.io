@@ -6,6 +6,7 @@ tags:
   - MBA02
   - MBA
 image: /Resources/MBA.jpg
+keywords: human resource management, HR strategies MBA, talent acquisition best practices, performance management HR, employee engagement techniques, organizational culture, HR analytics,MBA
 ---
 ## Nature and Scope of HRM:
 

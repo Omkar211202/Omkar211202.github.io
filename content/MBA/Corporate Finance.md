@@ -6,6 +6,7 @@ tags:
   - MBA02
   - MBA
 image: /Resources/MBA.jpg
+keywords: corporate finance fundamentals, capital budgeting techniques, corporate valuation methods, risk management finance, financial statement analysis, corporate capital structure, dividend policy ,MBA
 ---
 
 This whole notes is prepared based on class discussions and Prasanna Chandra's Corporate finance textbook. Looking out for corrections and open discussions on the aspects detailed below.

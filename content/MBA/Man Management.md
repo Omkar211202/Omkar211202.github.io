@@ -5,6 +5,7 @@ date:
 tags:
   - MBA
 image: /Resources/MBA.jpg
+keywords: man management techniques, leadership skills development, team management strategies, conflict resolution workplace, motivational management, managerial communication, executive leadership tips, MBA, MBA notes
 ---
 This page is built based on the inputs given by Bhagavan Baba.
 

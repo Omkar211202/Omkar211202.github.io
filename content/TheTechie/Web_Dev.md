@@ -5,6 +5,7 @@ date:
 tags:
   - WebDev
 image: /Resources/tech.jpg
+keywords: complaint management system, full-stack web development, website project tutorial, HTML CSS JavaScript guide, backend API implementation, database integration tutorial, web deployment Vercel
 ---
 
 ## Architecture used:

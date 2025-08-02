@@ -6,6 +6,7 @@ image: /Resources/Machine_Learning.jpg
 tags:
   - ML
   - Techie
+keywords: machine learning introduction, ML fundamentals beginners, supervised vs unsupervised learning, ML algorithms overview, machine learning concepts 2025, Python ML tutorial, AI basics
 ---
 
 > [!NOTE] Definition

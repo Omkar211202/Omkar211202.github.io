@@ -6,6 +6,7 @@ tags:
   - MBA01
   - MBA
 image: /Resources/MBA.jpg
+keywords: management theories overview, organizational structure models, strategic management concepts, management process steps, classical management school, modern management ideas, management framework guide, MBA, MBA notes
 ---
 ## Introduction:
 ### Definition:

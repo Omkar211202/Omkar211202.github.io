@@ -6,6 +6,7 @@ tags:
 date:
   - 2025-06-13
 image: /Resources/Machine_Learning.jpg
+keywords: supervised machine learning, classification and regression, decision tree tutorial, support vector machines, supervised learning algorithms, model evaluation metrics, training labeled datasets
 ---
 
 ## Definition:

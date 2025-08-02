@@ -6,6 +6,7 @@ tags:
   - MBA01
   - MBA
 image: /Resources/MBA.jpg
+keywords: research methodology managers, quantitative research techniques, qualitative research methods, survey design business, statistical sampling MBA, research report writing, hypothesis testing guide
 ---
 ## Theory / Knowledge (Gtg started)
 

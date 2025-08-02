@@ -6,6 +6,7 @@ tags:
   - Techie
 image: /Resources/tech.jpg
 draft: "false"
+keywords: GPT decoded guide, understanding GPT architecture, large language model tutorial, GPT use cases, transformer models explained, OpenAI GPT analysis, generative AI techniques
 ---
 ## How LLMS Works??
 

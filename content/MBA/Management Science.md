@@ -6,6 +6,7 @@ tags:
   - MBA02
   - MBA
 image: /Resources/MBA.jpg
+keywords: management science methods, operations research MBA, decision modeling techniques, linear programming management, quantitative analysis tools, simulation optimization, management science applications
 ---
 ## Topics Covered:
 - LPP, Transportation, Assignment, CPM, PERT, Game Theory.

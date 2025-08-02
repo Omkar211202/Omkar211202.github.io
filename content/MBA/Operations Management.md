@@ -6,6 +6,7 @@ tags:
   - MBA02
   - MBA
 image: /Resources/MBA.jpg
+keywords: operations management fundamentals, supply chain optimization, process improvement techniques, lean manufacturing principles, quality management systems, inventory control methods, project operations planning
 ---
 ## Operations Management:
 

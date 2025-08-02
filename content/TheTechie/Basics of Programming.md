@@ -5,6 +5,7 @@ tags:
 date:
   - 2025-07-25
 image: /Resources/tech.jpg
+keywords: Python programming basics, learn Python for data science, Python coding tutorial, Python syntax for beginners, scripting in Python, Python data structures intro, Python functions and modules
 ---
 ## Print function:
 

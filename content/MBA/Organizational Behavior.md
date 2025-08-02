@@ -6,6 +6,7 @@ tags:
   - MBA01
   - MBA
 image: /Resources/MBA.jpg
+keywords: organizational behavior MBA, workplace behavior analysis, group dynamics management, organizational culture change, leadership behavior models, employee motivation theories, OB case studies
 ---
 ## Organizational Behavior:
 

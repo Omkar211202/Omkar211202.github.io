@@ -6,6 +6,7 @@ tags:
   - DS
   - Techie
 image: /Resources/tech.jpg
+keywords: deep learning tutorial, advanced neural networks, CNN deep learning, LSTM sequence modeling, deep learning frameworks, AI image recognition, deep learning projects
 ---
 ## Intro:
 

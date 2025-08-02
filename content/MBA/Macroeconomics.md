@@ -6,6 +6,7 @@ tags:
   - MBA01
   - MBA
 image: /Resources/MBA.jpg
+keywords: macroeconomics principles, GDP inflation unemployment, fiscal monetary policy, economic growth models, global economic trends, macroeconomic analysis, central bank policy, MBA notes
 ---
 ## National Income Accounting:
 

@@ -8,6 +8,7 @@ tags:
   - Podcast
 image: /Resources/MBA.jpg
 podcast: /Resources/Marketing.mp3
+keywords: marketing management course, digital marketing strategies, product positioning MBA, marketing mix framework, consumer behavior analysis, brand management techniques, integrated marketing communications
 ---
 ## Marketing Introduction and Reality:
 
