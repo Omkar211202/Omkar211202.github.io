@@ -5,7 +5,7 @@ date:
 tags:
   - MBA01
   - MBA
-image: /Resources/MBA.jpg
+image: Resources/MBA.jpg
 ---
 ## Cashflow Stmt.
 ### Formulas:
