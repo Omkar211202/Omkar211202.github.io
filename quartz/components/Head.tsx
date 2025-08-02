@@ -97,9 +97,9 @@ export default (() => {
 
         {!usesCustomOgImage && (
           <>
-            <meta property="og:image" content={ogImageDefaultPath} />
-            <meta property="og:image:url" content={ogImageDefaultPath} />
-            <meta name="twitter:image" content={ogImageDefaultPath} />
+            <meta property="og:image" content={fileData.frontmatter?.image} />
+            <meta property="og:image:url" content={fileData.frontmatter?.image} />
+            <meta name="twitter:image" content={fileData.frontmatter?.image} />
             <meta
               property="og:image:type"
               content={`image/${getFileExtension(ogImageDefaultPath) ?? "png"}`}

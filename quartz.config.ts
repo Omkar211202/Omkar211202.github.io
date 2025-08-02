@@ -92,26 +92,6 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages({
-        colorScheme: "lightMode", // what colors to use for generating image, same as theme colors from config, valid values are "darkMode" and "lightMode"
-        width: 1200, // width to generate with (in pixels)
-        height: 630, // height to generate with (in pixels)
-        excludeRoot: true, // wether to exclude "/" index path to be excluded from auto generated images (false = use auto, true = use default og image)
-        imageStructure: (options) => {
-          const element = Og(
-            options.cfg,
-            options.fileData,
-            options.userOpts.colorScheme,
-            options.title,
-            options.description,
-            options.fonts
-          );
-          // Provide a fallback empty element if Og returns null
-          return element ?? ({} as Element);
-        }, // custom image component to use
-
-      }),
     ],
   },
 }
