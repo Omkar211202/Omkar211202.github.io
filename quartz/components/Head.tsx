@@ -93,7 +93,7 @@ export default (() => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta property="og:description" content={description} />
-        <meta property="og:image:alt" content={fileData.frontmatter?.socialImage} />
+        <meta property="og:image:alt" content={description} />
 
         {!usesCustomOgImage && (
           <>
