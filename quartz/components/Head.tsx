@@ -63,7 +63,7 @@ export default (() => {
           content={
             fileData.frontmatter?.keywords
               ? String(fileData.frontmatter.keywords)
-              : "omkar, omkar kathi, MBA notes, MBA, Tech, Spirituality, books reader, business, management, technology, self-help, productivity, meditation, learning, education, books, reading, study, spiritual growth"
+              : "omkar, omkar notes, omkar kathi, MBA notes, MBA, Tech, Spirituality, books reader, business, management, technology, self-help, productivity, meditation, learning, education, books, reading, study, spiritual growth"
           }
         />
         <meta
