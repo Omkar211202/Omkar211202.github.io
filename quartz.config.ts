@@ -1,6 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
+import { Og } from "./quartz/components"
 import * as Plugin from "./quartz/plugins"
-import { defaultImage } from "./quartz/util/og"
 
 /**
  * Quartz 4 Configuration
@@ -21,8 +21,8 @@ const config: QuartzConfig = {
     baseUrl: "https://omkar-notes.vercel.app/",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
-    keywords: "notes, personal knowledge base, Omkar Kathi, MBA notes, technology, spirituality, books reader, business, management, technology, self-help, productivity, meditation, learning, education, books, reading, study, spiritual growth",
-    description: "A personal knowledge base and notes by Omkar, powered by Quartz.",
+    keywords: "notes, personal knowledge base, Omkar, quartz",
+    description: "A personal knowledge base and notes site built with Quartz.",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
@@ -94,11 +94,20 @@ const config: QuartzConfig = {
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages({
-         colorScheme: "lightMode", // what colors to use for generating image, same as theme colors from config, valid values are "darkMode" and "lightMode"
-          width: 1200, // width to generate with (in pixels)
-          height: 630, // height to generate with (in pixels)
-          excludeRoot: true, // wether to exclude "/" index path to be excluded from auto generated images (false = use auto, true = use default og image)
-          imageStructure: defaultImage , // custom image component to use
+        colorScheme: "lightMode", // what colors to use for generating image, same as theme colors from config, valid values are "darkMode" and "lightMode"
+        width: 1200, // width to generate with (in pixels)
+        height: 630, // height to generate with (in pixels)
+        excludeRoot: false, // wether to exclude "/" index path to be excluded from auto generated images (false = use auto, true = use default og image)
+        imageStructure: (options) =>
+          Og(
+            options.cfg,
+            options.fileData,
+            options.userOpts.colorScheme,
+            options.title,
+            options.description,
+            options.fonts
+          ), // custom image component to use
+
       }),
     ],
   },

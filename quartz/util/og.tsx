@@ -202,7 +202,7 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
     <div
       style={{
         display: "flex",
-        flexDirection: "column",
+        flexDirection: "row",
         height: "100%",
         width: "100%",
         backgroundColor: cfg.theme.colors[colorScheme].light,
@@ -210,7 +210,23 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
         fontFamily: bodyFont,
       }}
     >
+      <img
+        src={fileData.frontmatter?.socialImage}
+        alt={
+          typeof fileData.frontmatter?.socialImageAlt === "string"
+            ? fileData.frontmatter.socialImageAlt
+            : "Social Image"
+        }
+        height={200}
+        width={320}
+      />
       {/* Header Section */}
+      <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        fontFamily: bodyFont,
+      }}>
       <div
         style={{
           display: "flex",
@@ -373,6 +389,7 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
           ))}
         </div>
       </div>
+    </div>
     </div>
   )
 }
