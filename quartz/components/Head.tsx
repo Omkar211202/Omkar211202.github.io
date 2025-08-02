@@ -60,11 +60,15 @@ export default (() => {
         <meta charSet="utf-8" />
         <meta
           name="keywords"
-          content="omkar, omkar kathi, MBA notes, MBA, Tech, Spirituality, books reader, business, management, technology, self-help, productivity, meditation, learning, education, books, reading, study, spiritual growth"
+          content={
+            fileData.frontmatter?.keywords
+              ? String(fileData.frontmatter.keywords)
+              : "omkar, omkar kathi, MBA notes, MBA, Tech, Spirituality, books reader, business, management, technology, self-help, productivity, meditation, learning, education, books, reading, study, spiritual growth"
+          }
         />
         <meta
           name="description"
-          content="Omkar Kathi's personal website: MBA notes, technology insights, spirituality, book reviews, productivity tips, and resources for business, management, and personal growth. Discover curated content for students, tech enthusiasts, and spiritual seekers."
+          content={description}
         />
         <link rel="canonical" href={`https://${cfg.baseUrl ?? "example.com"}/${fileData.slug ?? ""}`} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

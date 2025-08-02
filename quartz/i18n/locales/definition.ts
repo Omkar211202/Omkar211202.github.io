@@ -20,6 +20,7 @@ export interface Translation {
   propertyDefaults: {
     title: string
     description: string
+    keywords: string
   }
   components: {
     callout: CalloutTranslation
