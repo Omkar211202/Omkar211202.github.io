@@ -2,7 +2,7 @@
 title: Om's Notes
 date:
   - 2024-10-27
-image: Resources/Root.jpg
+image: /Resources/Root.jpg
 ---
 [[logo.excalidraw]]
 

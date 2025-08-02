@@ -5,7 +5,7 @@ date:
 tags:
   - MBA02
   - MBA
-image: Resources/MBA.jpg
+image: /Resources/MBA.jpg
 keywords: business government society, corporate social responsibility, public private partnership, business ethics governance, societal impact management, government policy business, stakeholder management
 ---
 
