@@ -25,7 +25,7 @@ export const Og = (
   })
  
   const Li = [created, reading]
-  console.log("this is the tiltle",title)
+
   return (
     <div
       style={{
@@ -35,7 +35,6 @@ export const Og = (
         alignItems: "flex-start",
         height: "100%",
         width: "100%",
-        backgroundImage: `url("https://${cfg.baseUrl}/content/${fileData.frontmatter?.image}.jpeg")`,
         backgroundSize: "100% 100%",
       }}
     >
@@ -90,62 +89,64 @@ export const Og = (
           marginLeft: "4rem",
         }}
       >
-        <img
-          src={`https://${cfg.baseUrl}/static/icon.png`}
-          width={80}
-          height={80}
-          style={{
-            position: "relative",
-            backgroundClip: "border-box",
-            borderRadius: "6rem",
-          }}
-        />
+        {!(fileData.slug?.startsWith("Excalidraw")) && (
+          <img
+        src={`https://${cfg.baseUrl}/content/Resources/${fileData.frontmatter?.image}`}
+        width={80}
+        height={80}
+        style={{
+          position: "relative",
+          backgroundClip: "border-box",
+          borderRadius: "6rem",
+        }}
+          />
+        )}
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            textAlign: "left",
-            fontFamily: fonts[0].name,
+        display: "flex",
+        flexDirection: "column",
+        textAlign: "left",
+        fontFamily: fonts[0].name,
           }}
         >
           <h2
-            style={{
-              color: cfg.theme.colors[colorScheme as keyof typeof cfg.theme.colors].light,
-              fontSize: "3rem",
-              fontWeight: 700,
-              marginRight: "4rem",
-              fontFamily: fonts[0].name,
-            }}
+        style={{
+          color: cfg.theme.colors[colorScheme as keyof typeof cfg.theme.colors].light,
+          fontSize: "3rem",
+          fontWeight: 700,
+          marginRight: "4rem",
+          fontFamily: fonts[0].name,
+        }}
           >
-            {title}
+        {title}
           </h2>
           <ul
-            style={{
-              color: cfg.theme.colors[colorScheme as keyof typeof cfg.theme.colors].gray,
-              gap: "1rem",
-              fontSize: "1.5rem",
-              fontFamily: fonts[1].name,
-            }}
+        style={{
+          color: cfg.theme.colors[colorScheme as keyof typeof cfg.theme.colors].gray,
+          gap: "1rem",
+          fontSize: "1.5rem",
+          fontFamily: fonts[1].name,
+        }}
           >
-            {Li.map((item, index) => {
-              if (item) {
-                return <li key={index}>{item}</li>
-              }
-            })}
+        {Li.map((item, index) => {
+          if (item) {
+            return <li key={index}>{item}</li>
+          }
+        })}
           </ul>
         </div>
         <p
           style={{
-            color: cfg.theme.colors[colorScheme as keyof typeof cfg.theme.colors].light,
-            fontSize: "1.5rem",
-            overflow: "hidden",
-            marginRight: "8rem",
-            textOverflow: "ellipsis",
-            display: "-webkit-box",
-            WebkitLineClamp: 7,
-            WebkitBoxOrient: "vertical",
-            lineClamp: 7,
-            fontFamily: fonts[1].name,
+        color: cfg.theme.colors[colorScheme as keyof typeof cfg.theme.colors].light,
+        fontSize: "1.5rem",
+        overflow: "hidden",
+        marginRight: "8rem",
+        textOverflow: "ellipsis",
+        display: "-webkit-box",
+        WebkitLineClamp: 7,
+        WebkitBoxOrient: "vertical",
+        lineClamp: 7,
+        fontFamily: fonts[1].name,
           }}
         >
           {description}

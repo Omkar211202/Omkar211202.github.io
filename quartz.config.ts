@@ -98,15 +98,18 @@ const config: QuartzConfig = {
         width: 1200, // width to generate with (in pixels)
         height: 630, // height to generate with (in pixels)
         excludeRoot: false, // wether to exclude "/" index path to be excluded from auto generated images (false = use auto, true = use default og image)
-        imageStructure: (options) =>
-          Og(
+        imageStructure: (options) => {
+          const element = Og(
             options.cfg,
             options.fileData,
             options.userOpts.colorScheme,
             options.title,
             options.description,
             options.fonts
-          ), // custom image component to use
+          );
+          // Provide a fallback empty element if Og returns null
+          return element ?? ({} as Element);
+        }, // custom image component to use
 
       }),
     ],
