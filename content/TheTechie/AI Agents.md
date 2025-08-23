@@ -13,7 +13,7 @@ keywords: building AI agents, autonomous agent design, reinforcement learning ag
 
 LLM's or large language models are built using natural language processing, to give an output for the input given by the user. The input is given in a language and the model gives an output in a language, using transformers.
 
-They can be built on the local system using `Ollama` server, in which different LLM models can be installed like: GPT-2, Llama, Llama-3, Grok.ai, Gemma 2, phi.
+They can be run on the local system using `Ollama` server, in which different LLM models can be installed like: GPT-2, Llama, Llama-3, Grok.ai, Gemma 2, phi.
 
 The following is the architecture used in building LLM's:
 
@@ -23,9 +23,13 @@ The below are few characteristics of LLM's:
 
 - They have no memory of their own. Its called the `Stateless` property.
 
-IMPLICATION: If you ask an LLM running in a system continuously, the LLM will not be able to answer the leading questions, as it would have forgotten the previous question asked (it does not remember the prior question).
-This makes these LLM's Scalable, it the responsibility of the client application to store questions asked priorly and the answers given by the LLM and refeed it back to the LLM when a new question is asked, thus can making the entire process scalable. 
-Meaning: You can ask question 1 to LLM1 and the question 2 can be answered by LLM2 etc., though it may be a leading question.
+IMPLICATION: If you ask questions to a LLM running in a system continuously, the LLM will not be able to answer the leading questions, as it would have forgotten the previous question asked (it does not remember the prior question). They have no memory of their own.
+
+Thus, we need to provide the LLM with the prior context for each question asked. 
+Its the responsibility of the client application to store questions asked priorly and the answers given by the LLM and refeed it back to the LLM when a new question is asked.
+
+This can make the entire process scalable. 
+Meaning: You can ask question 1 to LLM1 and the question 2 can be answered by LLM2 etc., though it may be a leading question, as you will feed the entire context upon giving a new question for it to answer.
 
 - The local LLM's will have a last updated date, meaning they will not be able to answer questions post a certain date. This is because they do not have the ability to access online resources and rephrase to give an answer.
 
@@ -80,7 +84,7 @@ poetry add langchain-openai langchain-community python-dotenv pypdf tiktoken
 
 ## RAG Implementation
 
-Retrieval Augmented Generation is the full form of RAG. This technique was used to combine LLM's and help them to cross the time constraint they face, by giving them access to external sources.
+Retrieval Augmented Generation is the full form of RAG. This technique is used to combine LLM's and help them to cross the time constraint they face, by giving them access to external sources, that are static in nature.
 
 - This can be done for data, that is static in nature, generally data from newspapers, textbooks, reports etc. may be given to the model using the RAG implementation.
 
@@ -181,19 +185,19 @@ while True:
     print("\nAnswer:", response.content)
 ```
 
-Any Input PDF or static data is converted into Chunks using Embeddings and stored in the database based on similarity and relatedness. When a query is asked, a similarity search is done to find relevant chunks that are passed on the LLM for writing the output.
+Any Input PDF or static data is converted into Chunks using Embeddings and stored in the database based on similarity and relatedness. When a query is asked, a similarity search is do, it finds the relevant chunks, that are then passed on the LLM for writing the output.
 
 ---
 
 ## Tool or Function Calling:
 
-Sometimes we may want to play with data, data i.e. dynamic changes everyday, and we need to make inference from that. Thus, Programmers have developed the concept of `API calls` to collect data from various providers. This is also called a Wrapped Ai service.
+Sometimes we may want to play with data, data i.e. dynamic and changes everyday, and we need to make inference from that. Thus, Programmers have developed the concept of `API calls` to collect data from various providers. This is also called a Wrapped API service.
 
 Generally this `API calls` were hard coded into the system via strict coding. But with AI coming into the area of programming, this has been taken to a next level.
 
 - Dynamic data can be embedded into AI models with `Functional Calling` .
 - Today when we have multiple functions, and we need to obtain some output, we have to call the functions in a sequential order. Lets say I want to know the weather in Bangalore, and there are two functions.
-- Function 1 gives the latitudes and longitudes of an inputted city and Function 2 gives the weather conditions given the latitudes and longitudes.
+- Function 1 gives the latitudes and longitudes of an input city and Function 2 gives the weather conditions if given the latitudes and longitudes.
 - So when we do Function calling, the LLM helps us to run these functions in the sequential order so as to obtain the output finally.
 - The uniqueness in the entire process is that it is not hard coded into the system, and its LLM that is deciding the order.
 
@@ -340,7 +344,7 @@ if __name__ == "__main__":
 
 - The latest development in the field of AI Agents in MCP or Model context protocol.
 - The bottleneck in tool calling is that it has to be done locally for each project it is used in, that too in a non-standard way.
-- AI companies have thus started running the MCP servers, that contain all the functions that are related to context of functionality, example an Amazon MCP server will have the functions like Price calls, Quantity available, highest sold etc. defined centrally and can be accessed by all with ease.
+- AI companies have thus started running the MCP servers, that contains all the functions that are related to context of functionality, example an Amazon MCP server will have the functions like Price calls, Quantity available, highest sold etc. defined centrally and can be accessed by all with ease.
 - Thus, MCP servers give the list of functions available to local machine, which sends the same to the model.
 - Upon receiving the sequential order of functions, the local sends the order, the functions are then run in the MCP servers and output is given back to the local machine which sends it to the LLM model.
 
