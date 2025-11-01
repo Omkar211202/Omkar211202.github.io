@@ -6,7 +6,7 @@ tags:
   - MBA
   - MBA03
 image: /Resources/MBA.jpg
-draft: "true"
+draft: "false"
 ---
 ## Johari Window:
 
