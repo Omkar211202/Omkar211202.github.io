@@ -187,6 +187,15 @@ while True:
 
 Any Input PDF or static data is converted into Chunks using Embeddings and stored in the database based on similarity and relatedness. When a query is asked, a similarity search is do, it finds the relevant chunks, that are then passed on the LLM for writing the output.
 
+Semantic Search: This is a search mechanism that looks at phrases and contextual meaning, rather than key words. This can be done by using Embeddings.
+
+Embeddings: stores a word in a vector format, this will contain multiple meanings for a word. Suppose you say "Apple", it will likely to mean fruit, technology, color, taste and shape. Embeddings are created for a bunch of words, not single words.
+
+
+> [!NOTE] Check out
+> Check out text-embedding-ada-02 of Open AI.
+
+
 ---
 
 ## Tool or Function Calling:

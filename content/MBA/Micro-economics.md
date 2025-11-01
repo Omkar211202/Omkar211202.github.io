@@ -225,3 +225,6 @@ Conclusions:
 - monopsony: many sellers but less buyers. 
 - oligopsony: few sellers but less buyers
 ---
+
+[[Econ_Mark_Graphs.excalidraw]]
+

@@ -13,7 +13,10 @@ keywords: marketing management course, digital marketing strategies, product pos
 ## Marketing Introduction and Reality:
 
 ### Marketing:
-The process by which individuals/business meet needs/demands/wants through product/service/experience by exchange/transaction/relationship and attain value or satisfaction from the market.
+
+> [!Note] Definition
+> The process by which individuals/business meet needs/demands/wants through product/service/experience by exchange/transaction/relationship and attain value or satisfaction from the market.
+
 
 ### Marketing Management:
 analyze, plan, implement and control all the activities of an organization to build, control and manage demand.
@@ -212,7 +215,7 @@ New Emergent of Marketing Realities:
 4. flanking. (Nirma vs Surf. give a lower price with a lower quality and vice-versa)
 
 - Defensive strategies:
-1. Pre-emptive.
+1. Pre-emptive. 
 2. Contraction.
 3. Positional defense.
 
