@@ -16,14 +16,12 @@ date:
 > [!NOTE] Quote on Strategy
 > You may not be able to outsmart others, but you surely can out position them.
 
-- Strategy began with corporate planning where institutions were more concerned about capital allocation and attainment of 5 year goals. This was in the 1960.
+- Strategy began with corporate planning, where institutions were more concerned about capital allocation and attainment of 5 year goals. This was in the 1960.
 - In 1970's, Oil crisis and Hyper competition led business to find profitable positions in the market despite the surroundings, this phase witnessed the works of Michael Porter, who applied industrial economics to strategy. ("you will read a lot about him in the following page")
 - The Resource Based View made organizations believe that its their internal processes, resources and people who gave them leverage.
-- The last and recent developments in strategy is the world of digitalization, where change is rampant, a cautious phase for business to await opportunities and take the first mover advantage.
+- The last and recent developments in strategy is the world of digitalization, where change is rampant, a cautious phase for business to await opportunities and take the first mover advantage. This may be termed as Access based view.
 ### What is Strategy?
-
 - Theme: a unifying theme that gives direction and meaning  to organization in their daily work about steps and decisions they make.
-- Reliance Jio: Digital life through data abundance
   
 - Positioning:
   - a means by which firms compete and achieve a favorable position in their industry.
@@ -52,12 +50,11 @@ An Analogy:
 
 Though, we may fathom or think that only one core strength can give competitive advantage, no, sometimes a set of activities interlock with each other to give a strategic advantage.
 
-The case of South West airlines that cut down the price of tickets, also did not serve meals on the plane, seats were not comfortable, only short distance flights were available etc.
-A group of such activities made  the airlines profitable.
+The case of South West airlines where they cut down the price of tickets, did not serve meals on the plane, the seats were sleek, only short distance flights were available etc. are but illustrations to show that the series of activities taken to run the low cost carrier.
 
 The following are few strategic positions in the open market:
-- variety based: focus only on a small niche in the market place. (MRF Tyres)
-- Needs based: providing the product for only a type o customers and not for all. (Gita press)
+- variety based: focus only on a small niche in the market place. (MRF Tyers)
+- Needs based: providing the product for only a type of customers and not for all. (Gita press)
 - access based: trying to reach people who are generally not tapped by the large players. (Starlink)
 
 How is strategy made??
@@ -75,7 +72,7 @@ Objective of strategy is to:
 2. Create a premium that is the gap between what people are willing the pay vs the cost of product.
 3. should lead to superior and sustainable financial performance
 
-An org. should be aware of its external consistency and opportunities available and internal consistency.
+An org. should be aware of its external consistency, opportunities available and internal consistency.
 
 Framework 1: Porters Six forces model.
 
@@ -95,16 +92,19 @@ Balanced score card
 - Financials, customers, Internal, Learning and growth
 
 Objectives and key results:
+A plan started by IBM where:
+- objectives are qualitatively expressed and key results are measured using metrics.
 
 Threats of strategy:
 1. Imitation
 2. Substitution
-3. Holdup:
+3. Holdup
 4. Adaption of trends due to Perception, Motivation, Inspiration, Coordination.
 
 ---
 
-## Strategic Leadership
+## Strategic Leadership:
+
 - As known from earlier, the lessons from strategy indicate: ROIC (superior performance) and competitive advantage.
 - Profits and growth are determined by 2 factors: industry performance in the market and success of the individual company in the industry space.
 - Though profit is metric for a business org, for an NGO and Govt. org its gonna be the impact they have in their space
@@ -130,8 +130,6 @@ Types of strategies:
 
 - Business level strategy: Cost leadership, Differentiation, and focus.
 - Functional strategy looks forth to find the best course of action to be taken to ensure that org. goals are attained.
-
-
 
 ---
 
@@ -169,22 +167,20 @@ Strategic groups within an industry:
 - They may vary in terms of the target audience, distribution channels, pricing, technology adoption and customer focus.
 - These groups are often identified by the similar features they possess.
 
-- competitive analysis, market positioning, strategic decision making and industry structure.
-
 When an industry is building or evolving, the following stages may be observed:
 - Embryonic
 - Growth
 - Shakeout
 - Mature
-- decline
+- decline.
+
+The following phases are also highlighted in the BCG matrix.
 
 ---
 ## Internal Analysis
 
-JIO case
-
 - firm strength that helps the company to differentiate its products or achieve substantially lower costs for competitive advantage.
-- Apple is known for its design
+- Apple is known for its design, giving it competitive advantage.
 - Distinctive competencies are not copied easily given its complex nature or IP rights.
 
 Framework VRIO:
@@ -193,8 +189,9 @@ Framework VRIO:
 - Inimitable: they are hard to copy ( can be due to path dependence, casual ambiguity, social complexity and IP)
 - organized: the structure of the org is made apt to create and capture the value.
 
-Framework Porter Value chain analysis
+Framework Porter Value chain analysis classifies a company based on primary and supporting activities. The following is a classic Value chain analysis for Zee entertainment.
 
+![[Screenshot 2025-10-25 204710.png]]
 
 What makes the company have a strategic advantage:
 - superior quality: excellence and reliability
@@ -202,9 +199,14 @@ What makes the company have a strategic advantage:
 - superior innovation: product innovation or process innovation
 - superior efficiency: employee productivity or capital productivity.
 
-Difference bw Resources, capabilities and competencies:
+Difference between Resources, capabilities and competencies:
+
+| Resources                                 | Capabilities                                                                                   | Competencies                                                                                        |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| foundational assets with the organization | deploy or coordinate its resources to achieve a desired outcome, can be termed as exploitation | cross functional integration of capabilities, making all depts function to deliver that capability. |
 
 How to identify a core competency:
+- This is  the best skill or knowledge a companies has given its existence for a long time and it will position the company as the best spot in this regard.
 
 Advantages of core competency:
 - gives access to a variety of markets
@@ -216,21 +218,14 @@ Porters value chain analysis:
 - Secondary: procurement, technology, infrastructure, and HRM.
 
 Business Model:
-Key activities
-Key Partnerships:
-Key resources:
-Value proposition:
-channels:
-Customer relationships:
-customer segments:
+A Business model is a collection all things that are concerning a company from Key activities, Key Partnerships, Key resources, Value proposition, channels, Customer relationships, customer segments. They also list down all the Costs and Revenues wrt to  the company. The following is an example of Business Model canvas of Zee Entertainment:
 
-Costs
-Revenues
+![[Screenshot 2025-10-25 205638.png]]
 
-framework for growth: (ansoff matrix)
-- leverage existing core competencies
-- build new core competencies
-- put old competencies in new market
+Framework for growth: (ansoff matrix)
+- leverage existing core competencies for the old markets
+- build new core competencies for the old markets
+- put old competencies in new markets
 - build for new markets
 
 
@@ -284,68 +279,60 @@ Two side markets and network externalities:
 All platform businesses aim for a take it all approach, trying to capture the entire ecosystem at a tipping point.
 
 Business ecosystems:
-
-
-
+- Two sided markets diversify into related products or services to offer more to the customers, making the entire system an ecosystem.
+- Zomato went out to form district etc., which is not the core aspect of Zomato.
 
 ---
 ## Strategy & Innovation
 
-- innovation drives: increase in perceived value and decrease in cost
-- exploitation and exploration
-- eliminate, reduce, raise and create
-- Business model innovation:
-1. CVP
-2. Profit formula
-3. key resources
-4. key processes
+- Innovation was limited to peripheral growth in business, but over time it has become a day to day prominent part of the business work. It helps to find advantage, outline market changing activities etc.
+- Innovation lies in enhancing the firm's ability to create economic value.
+- it either increasing perceived value and decreasing cost.
+- Ambidextrous can be viewed into two forms: the defensive exploitation (making the best of current state) and offensive exploration (looking for better business avenues).
 
-Innovator's Dilemma:
+Clayton Christensen's Disruptive Innovation:
+- A process by where new comers challenge the incumbents by finding gaps in the market to build their niche. This can be done by the following:
+- Low end Disruptions: reaching out the non premium market segment.
+- new market disruption: create new product by delivering a service or product in a different a way, this is generally triggered by a change in technology.
 
+Innovator Dilemma:
+- The problem faced by the incumbent whether to find significant importance in the newcomer and his way of doing things or to believe in way of doing things.
+- This is generally faced when new technology poses threat to existing technological sunk costs.
 
-Design thinking:
-- clarify,
-- ideate
-- develop
-- implement and test
+This is how Innovative Innovation happens:
 
-Integrating Innovation
-- scaling innovation
-- sustaining growth
+[[Disruptive Innovation.excalidraw]]
+
+Blue Ocean Strategy:
+- Trying to play in the untapped market spaces, this is known as blue oceans, the fully played market is often considered as the red ocean (you can bleed if you play out there).
+- The red ocean could be the old market, where there are fully laid rules of functioning and conducting businesses.
+- This could possibly lead to creating new markets as you will innovate to solve the same need faced by the customer in a new and different manner.
+
+The Four Actions Framework:
+Lets say I'm Gillette and I'm trying to enter the then existing markets the following is the way i would probably build my blue ocean strategy:
+
+| Eliminate                                  | Reduce                         | Raise                                | Create                                      |
+| ------------------------------------------ | ------------------------------ | ------------------------------------ | ------------------------------------------- |
+| - usage of non clean and dangerous blades. | - wastage of blades and frames | - better designed blades and frames  | - lotions, aftershaves,                     |
+| - uneasiness faced while shaving.          | - injuries while shaving       | - easily usable grooming accessories | - other grooming accessories and ecosystem. |
+| - bad designed frames                      |                                |                                      |                                             |
+Refer to strategy canvas development on the internet, a prominent framework or tool in Blue ocean strategy.
+
 ---
 ## Global Strategy Leadership
 
-- Better of test
-- Ownership test
-- willingness to pay 
-- supplier opportunity cost
+- Porter Diamond model is the first model to analyze a new environment / new country to run an enterprise.
+- it considers the following: Intensity of rivalry, Local demand, competitiveness of related and supporting industries, and factor conditions.
 
-- national competitive advantage: 
-1. Intensity of rivalry
-2. factor conditions
-3. local demand conditions
-4. competitiveness of related and supporting activities
+- An yet another model to consider the distance between places and products is the CAGE model which analyses the cultural, administrative, geographic and economic conditions for functioning in another country.
 
-Whether to enter a country:
-- Cultural
-- administrative
-- geographic
-- economic differences
-
-Strategies based on cost reductions and local responsiveness:
-- standard globalization strategy
-- transnational strategy
-- international strategy
-- localization strategy
-
-- env scanning
-- define strategic intents
-- Comp. advantage
-- global capabilities
-- structuring and organizing
+- Two diemensions of the Diamond model may considered: 1. Pressure for cost reductions and pressure for local responsiveness, and the following strategies may be evolved:
 
 
-
+| Cost Reduction/Local responsiveness | low                             | high                   |
+| ----------------------------------- | ------------------------------- | ---------------------- |
+| high                                | standard globalization strategy | transnational strategy |
+| low                                 | International strategy          | Localization strategy  |
 
 
 ---

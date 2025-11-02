@@ -85,7 +85,7 @@ Specs of Research questions: SMART.
 
 Maxwell Design:
 
-[[Drawing 2025-03-26 21.25.40.excalidraw]]
+[[Maxwell_research-Framework.excalidraw]]
 
 
 
