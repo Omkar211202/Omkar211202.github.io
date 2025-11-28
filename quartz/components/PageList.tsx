@@ -55,7 +55,7 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
           <a href={resolveRelative(fileData.slug!, page.slug!)}>
             <div class="box">
               <div class="desc">
-              <div class="container">
+              <div class="cont">
               <img src={image as string} alt={title as string} height={200} width={355} />
 
               <div class="bottom-right">{title}</div>
@@ -176,11 +176,10 @@ PageList.css = `
   background-color: yellow;
   font-size: 1.5rem;}
 
-.container{
+.cont{
   position:relative;
   text-align:center;
   color: white;
-
   }
 
 .bottom-right{

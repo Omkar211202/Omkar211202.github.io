@@ -79,7 +79,7 @@ Alltags.css = `
 .gr {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    gap: 7px;
     padding: 0.2rem;
     margin: 0;
     border: 1px solid var(--secondary);
@@ -89,12 +89,13 @@ Alltags.css = `
 .sect-li {
     list-style: none;
     text-align: center;
+    font-size: 5px;
 }
 
 .container {
-    text-align: left;
+    text-align: center;
     color: var(--dark);
-    width: 100%;
+    width: fit;
     border-radius: 0.5rem;
     border: 1px solid var(--secondary);
     background-color: var(--tertiary);

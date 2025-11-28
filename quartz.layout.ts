@@ -46,22 +46,14 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.ConditionalRender({
-      component: Component.Explorer(),
-      condition: (page) => page.fileData.slug == "index",
-    }),
+    
     Component.ConditionalRender({
       component:Component.DesktopOnly(Component.TableOfContents()),
      condition:(page)=> page.fileData.slug !== "index",}),
-    // Component.SideLogo(),
-    //  Component.ConditionalRender({
-    //   component:Component.DesktopOnly(Component.Graph()),
-    //   condition:(page)=>page.fileData.slug !=="index"
-    //  })
-    
 
-  
+     Component.Explorer(),
   ],
+  
   right: [
     Component.ConditionalRender({
       component: Component.DesktopOnly(Component.Alltags),

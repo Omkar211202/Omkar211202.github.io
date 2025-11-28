@@ -15,8 +15,11 @@
     width: 20px;
     height: 20px;
     top: calc(50% - 10px);
-    fill: var(--light);
+    background-color: var(--lightgray);
+    fill: var(--darkgray);
     transition: opacity 0.1s ease;
+    padding: 5px;
+    border-radius: 0.5rem;
   }
 }
 
