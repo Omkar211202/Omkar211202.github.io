@@ -106,7 +106,7 @@ export default ((userOpts?: Partial<Options>) => {
   flex: 1 1 0;
   min-width: 325px;
   max-width: 400px;
-  border: 2px solid var(--lightgray);
+  border: 1px solid var(--darkgray);
   padding: 0.5rem;
   border-radius: 0.5rem;
 }

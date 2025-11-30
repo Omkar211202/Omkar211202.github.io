@@ -34,7 +34,7 @@
   overflow-y: hidden;
   border: 2px solid var(--lightgray);
   border-radius: 0.5rem;
-  padding: 0rem;
+  padding: 0.2rem;
   flex: 0 1 auto;
   min-height: 25px;
   max-height: 720px;
@@ -138,7 +138,7 @@ button.desktop-explorer {
 
       &.active {
         opacity: 1;
-        color: var(--tertiary);
+        color: var(--light);
       }
     }
   }
@@ -195,7 +195,7 @@ button.desktop-explorer {
     & span {
       font-size: 0.95rem;
       display: inline-block;
-      color: var(--secondary);
+      color: var(--gray);
       font-weight: $semiBoldWeight;
       margin: 0;
       line-height: 1.5rem;
