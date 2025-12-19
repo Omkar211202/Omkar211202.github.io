@@ -6,10 +6,6 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
-     Component.ConditionalRender({
-      component: Component.RecentNotes(),
-      condition: (page) => page.fileData.slug == "index",
-    }),
     Component.Graph(),
 ],
   footer: Component.Footer({
@@ -28,10 +24,15 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
+
     Component.Quotes,
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+    Component.ConditionalRender({
+      component: Component.RecentNotes(),
+      condition: (page) => page.fileData.slug == "index",
+    }),
     Component.MobileOnly(Component.Podcasts()),
   ],
   left: [

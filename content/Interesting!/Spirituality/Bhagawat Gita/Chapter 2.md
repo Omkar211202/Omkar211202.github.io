@@ -5,6 +5,6 @@ date:
   - 2025-09-16
 image: /Resources/bg.png
 tags:
-  - Spirituality
+  - Within
 description:
 ---

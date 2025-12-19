@@ -3,7 +3,7 @@ title: "Chapter 12: Bhakti Yog"
 date:
   - 2025-09-16
 tags:
-  - Spirituality
+  - Within
 image: /Resources/bg.png
 draft: "false"
 description:

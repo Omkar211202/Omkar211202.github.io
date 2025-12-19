@@ -2,7 +2,7 @@
 title: Breath is Life.
 tags:
   - Thursday
-  - Spirituality
+  - Within
 date:
   - 2025-12-25
 draft: "true"
