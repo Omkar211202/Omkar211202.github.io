@@ -1,3 +1,13 @@
+---
+title: Bhagawat Gita
+date:
+  - 2025-12-19
+tags:
+  - Spirituality
+image: /Resources/bg.png
+---
+
+
 | **Sanskrit Name**             | **English Translation**                                          |
 | ----------------------------- | ---------------------------------------------------------------- |
 | Arjun Viṣhād Yog              | Lamenting the Consequences of War                                |

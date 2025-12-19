@@ -4,9 +4,9 @@ date:
   - 2025-09-16
 tags:
   - Spirituality
-image: /Resources/Miscellaneous.jpg
-draft: "true"
-des: yet come
+image: /Resources/bg.png
+draft: "false"
+description:
 ---
 
 

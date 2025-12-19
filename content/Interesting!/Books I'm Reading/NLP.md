@@ -5,6 +5,7 @@ tags:
 date:
   - 2025-07-24
 keywords: Neuro-linguistic programming,
+image: https://i0.wp.com/sctcoc.org/wp-content/uploads/2024/02/image-4.png?ssl=1
 ---
 ## Key Lesson's from Neuro-Linguistic Programming:
 
