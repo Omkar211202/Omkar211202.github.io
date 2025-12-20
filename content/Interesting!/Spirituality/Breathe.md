@@ -36,7 +36,7 @@ image: https://i0.wp.com/sctcoc.org/wp-content/uploads/2024/02/image-4.png?ssl=1
 </div>
 (Bhagawat Gita)
 
-Krishna was very clear, he said only by ***Practice*** , so what first step in the process of controlling your mind???
+Krishna was very clear, he said only by ***Practice*** , so what is the first step in the process of controlling your mind???
 
 Mind wanders from past into the future, this is in fact the cause of stress and anxiety. That's why its important to be in the now. The Now exists only in the breath, its the breath now, you live in, there is no past or future for the breath.
 
@@ -64,12 +64,14 @@ In the Hatha Yoga Pradipika, its written:
 
 > [!Abstract] Hathayoga:
 > "चले वाते चलं चित्तं , निश्चले निश्चलं भवेत्":  (2.2)
+> 
 *When the breath is restless, so is the mind. When the breath is steady, the mind becomes steady.*
 
 
 
 > [!Abstract] Sloka:
 > "प्राणायामेन संयुक्तः मनः शान्तिं निगच्छति"
+> 
 Its only with pranayama, we can get peace of mind.
 
 
@@ -90,6 +92,7 @@ Thus, if we control our breath and ensure that we have longer exhalations and sl
 
 > [!Abstract] Sloka:
 > प्राणः प्रज्ञा प्रतिष्ठितः
+> 
 Prana (breath/life force) is the foundation of intelligence and consciousness.
 
 
@@ -105,6 +108,7 @@ Only breath can help us to remove the veil of ignorance and gives us illuminatio
 
 > [!NOTE] Sloka
 > "प्राणायामात् सर्वरोगक्षयो भवेत्"
+> 
 > By doing Pranayama, we can remove almost all health issues in our body.
 
 If we ensure that exhalations are longer than inhalations, we can remove more CO2 from our body and ensure that 80% of oxidants exit from our body, giving us a more relaxed and happy body.
@@ -149,6 +153,7 @@ Lets conclude the discussion about Breath (Prana) with a sloka from Bhagavat Git
 
 > [!Abstract] Bhagawat Gita
 > अपाने जुह्वति प्राणं प्राणेऽपानं तथापरे ।
+> 
 > प्राणापानगती रुद्ध्वा प्राणायामपरायणाः ॥ 
 > 
 > Krishna says: Some yogis offer inhalation into exhalation, others exhalation into inhalation. Restraining the movement of inhalation and exhalation, one can become devoted to pranayama.
