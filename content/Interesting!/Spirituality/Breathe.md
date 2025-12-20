@@ -14,10 +14,27 @@ image: https://i0.wp.com/sctcoc.org/wp-content/uploads/2024/02/image-4.png?ssl=1
 ---
 ## Breathe:
 
-असंशयं महाबाहो मनो दुर्निग्रहं चलम् ।  
-अभ्यासेन तु कौन्तेय वैराग्येण च गृह्यते ॥ (6.35)
+<div style="background-color: #fdf6e3; border: 2px solid #d4a76a; border-radius: 15px; padding: 25px; margin: 10px 0; color: #5c3d2e; line-height: 1.8;">
 
-"Its  very difficult to control you mind, this is certain beyond doubt. But, only with the yoga of Practice and Detachment, you can control it."
+  <div style="text-align: center; font-size: 0.8em; opacity: 0.6; margin-bottom: 10px;">
+    ✧ ══════•❁❀❁•══════ ✧
+  </div>
+
+  <div style="text-align: center; font-size: 1.4em; font-weight: bold; margin-bottom: 15px;">
+    असंशयं महाबाहो मनो दुर्निग्रहं चलम् ।  <br>
+	अभ्यासेन तु कौन्तेय वैराग्येण च गृह्यते ॥ (6.35)
+  </div>
+
+  <div style="border-top: 1px dashed #d4a76a; padding-top: 15px; font-size: 1em; font-style: italic;">
+    <b>Meaning:</b> "Its  very difficult to control you mind, this is certain beyond doubt. But, only with the yoga of Practice and Detachment, you can control it."
+  </div>
+
+  <div style="text-align: center; font-size: 0.8em; opacity: 0.6; margin-top: 10px;">
+    ✧ ══════•❁❀❁•══════ ✧
+  </div>
+
+</div>
+(Bhagawat Gita)
 
 Krishna was very clear, he said only by ***Practice*** , so what first step in the process of controlling your mind???
 
@@ -44,11 +61,17 @@ Thus, to live longer we have to ensure that we do not ***stress out, our metabol
 ### Emotions and Stress:
 In the Hatha Yoga Pradipika, its written:
 
-"चले वाते चलं चित्तं , निश्चले निश्चलं भवेत्":  (2.2)
+
+> [!Abstract] Hathayoga:
+> "चले वाते चलं चित्तं , निश्चले निश्चलं भवेत्":  (2.2)
 *When the breath is restless, so is the mind. When the breath is steady, the mind becomes steady.*
 
-"प्राणायामेन संयुक्तः मनः शान्तिं निगच्छति"
+
+
+> [!Abstract] Sloka:
+> "प्राणायामेन संयुक्तः मनः शान्तिं निगच्छति"
 Its only with pranayama, we can get peace of mind.
+
 
 The different states in our body, (called emotions) are caused by particles released by the brain (called hormones). Thus, this keeps us in a reward-punishment mechanism that drives us to do a lots of work, and makes attachment very core to our life. 
 
@@ -63,8 +86,12 @@ Thus, if we control our breath and ensure that we have longer exhalations and sl
 ---
 
 ### Intelligence and Thinking:
-प्राणः प्रज्ञा प्रतिष्ठितः
+
+
+> [!Abstract] Sloka:
+> प्राणः प्रज्ञा प्रतिष्ठितः
 Prana (breath/life force) is the foundation of intelligence and consciousness.
+
 
 When we are in stress, the survival brain takes over. Thus, we cannot think much and fast. For us to think in a logical fashion, we need to pump the Pre-frontal cortex with more oxygen. Thus, if we can breath slowly, with large volume of inhalation, we can push more oxygen into the pre-frontal cortex. Fasting breathing will impact more for the survival brain (HPA), thus cannot help Pre-frontal.
 
@@ -75,14 +102,17 @@ Only breath can help us to remove the veil of ignorance and gives us illuminatio
 
 ### Health and well being:
 
-"प्राणायामात् सर्वरोगक्षयो भवेत्"
-- By doing Pranayama, we can remove almost all health issues in our body.
+
+> [!NOTE] Sloka
+> "प्राणायामात् सर्वरोगक्षयो भवेत्"
+> By doing Pranayama, we can remove almost all health issues in our body.
 
 If we ensure that exhalations are longer than inhalations, we can remove more CO2 from our body and ensure that 80% of oxidants exit from our body, giving us a more relaxed and happy body.
 
 ---
 
 ### Life and Purpose:
+
 "मन एव मनुष्याणां कारणं बन्धमोक्षयोः": 
 
 - It is the mind that is the cause of slavery and liberation.  The only thing we have to control the mind and the process is by our breath.
@@ -116,11 +146,13 @@ Finally, **Resonance Breathing**, practiced at around five to six breaths per mi
 ### Conclusion:
 Lets conclude the discussion about Breath (Prana) with a sloka from Bhagavat Gita:
 
-"अपाने जुह्वति प्राणं प्राणेऽपानं तथापरे ।
-प्राणापानगती रुद्ध्वा प्राणायामपरायणाः ॥"
 
-Krishna says: Some yogis offer inhalation into exhalation, others exhalation into inhalation. Restraining the movement of inhalation and exhalation, one can become devoted to pranayama.
-
+> [!Abstract] Bhagawat Gita
+> अपाने जुह्वति प्राणं प्राणेऽपानं तथापरे ।
+> प्राणापानगती रुद्ध्वा प्राणायामपरायणाः ॥ 
+> 
+> Krishna says: Some yogis offer inhalation into exhalation, others exhalation into inhalation. Restraining the movement of inhalation and exhalation, one can become devoted to pranayama.
+   
 Just see whom Krishna calls yogis: "The one who have more exhalation" and others "who inhale more than exhale". Thus, in Yoga its important to exhale for longer than inhalation. There are more benefits of long exhalations with regards to diseases. He was teaching medicine 3000 years back.
 
 Thus, 
