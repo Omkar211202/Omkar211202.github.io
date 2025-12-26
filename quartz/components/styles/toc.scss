@@ -36,19 +36,19 @@ button.toc-header {
     font-size: 1rem;
     display: inline-block;
     margin: 0;
-    color: var(--light);
+    color: var(--dark);
   }
 
   & .fold {
     margin-left: 0.5rem;
     transition: transform 0.3s ease;
     opacity: 0.8;
-    color: var(--light);
+    color: var(--dark);
   }
 
   &.collapsed .fold {
     transform: rotateZ(-90deg);
-    color: var(--light);
+    color: var(--dark);
   }
 }
 
@@ -61,7 +61,7 @@ button.toc-header {
     margin: 0.5rem 0;
     padding: 0;
     & > li > a {
-      color: var(--light);
+      color: var(--dark);
       opacity: 0.35;
       transition:
         0.5s ease opacity,

@@ -3,7 +3,9 @@ title: Bhagawat Gita
 date:
   - 2025-12-19
 tags:
-  - Spirituality
+  - Within
+  - Gita
+  - Yoga
 image: /Resources/bg.png
 ---
 
