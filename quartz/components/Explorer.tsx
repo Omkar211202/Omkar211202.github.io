@@ -8,6 +8,7 @@ import { i18n } from "../i18n"
 import { FileTrieNode } from "../util/fileTrie"
 import OverflowListFactory from "./OverflowList"
 import { concatenateResources } from "../util/resources"
+import { options } from "yargs"
 
 type OrderEntries = "sort" | "filter" | "map"
 
@@ -46,7 +47,7 @@ const defaultOptions: Options = {
       return -1
     }
   },
-  filterFn: (node) => node.slugSegment !== "tags",
+  filterFn: (node) => node.slugSegment !== "tags" && !node?.slugSegment.includes("Excalidraw"),
   order: ["filter", "map", "sort"],
 }
 

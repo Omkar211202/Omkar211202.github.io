@@ -73,12 +73,13 @@ a {
   font-weight: $semiBoldWeight;
   text-decoration: none;
   transition: color 0.2s ease;
-  color: var(--secondary);
+  color: var(--tertiary);
+
 
   &.internal {
     text-decoration: none;
     background-color: var(--highlight);
-    font-size: 0.9rem;
+    font-size: 1.05rem;
 
     &:has(> img) {
       background-color: transparent;
@@ -363,7 +364,7 @@ h6 {
 
 // typography improvements
 h1 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin-top: 2.25rem;
   margin-bottom: 1rem;
 }
@@ -480,7 +481,9 @@ code {
 tbody,
 li,
 p {
-  line-height: 1.6rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
 }
 
 .table-container {

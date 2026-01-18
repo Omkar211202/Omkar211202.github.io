@@ -18,11 +18,13 @@ interface Options {
 }
 
 const defaultOptions = (cfg: GlobalConfiguration): Options => ({
-  title:"Latest Notes",
+  title: "Latest Notes",
   limit: 10,
   linkToMore: false,
-  showTags: true,
-  filterFn: (node) => node.slugSegment !== "tags" ,
+  showTags: false,
+  filterFn: (node) =>
+    node.slugSegment !== "tags" &&
+    !node.frontmatter?.title?.endsWith("excalidraw"),
   sort: byDateAndAlphabetical(cfg),
 })
 
@@ -34,112 +36,145 @@ export default ((userOpts?: Partial<Options>) => {
     cfg,
   }: QuartzComponentProps) => {
     const opts = { ...defaultOptions(cfg), ...userOpts }
-    const pages = allFiles.filter(opts.filterFn).sort(opts.sort)
-    const remaining = Math.max(0, pages.length - opts.limit)
-    const pag=pages.filter((file) => ! file.frontmatter?.title.endsWith('excalidraw'))
-    const notes = pag.filter((file) => file.slug != "index")
+
+    const pages = allFiles
+      .filter(opts.filterFn)
+      .sort(opts.sort)
+      .filter((file) => file.slug !== "index")
+
+    const notes = pages.slice(0, opts.limit)
+
     return (
       <div class={classNames(displayClass, "recent-notes")}>
         <h3>{opts.title ?? i18n(cfg.locale).components.recentNotes.title}</h3>
-        <ul class="recent-ul horizontal-ul">
-          {notes.slice(0, opts.limit).map((page) => {
-            const title = page.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
-            const tags = page.frontmatter?.tags ?? []
-            const photo = page.frontmatter?.image || "/Resources/Root.jpg"
-            return (
-              <li class="recent-li horizontal-li">
-                <div class="section">
-                  <a class="image-container" href={resolveRelative(fileData.slug!,page.slug!)}>
-                    <img src={typeof photo === "string" ? photo : undefined} alt={title} height={190} width={325} />
-                    <div class="recent-title">
-                        {title}
-                    </div>
+
+        <ul class="recent-ul marquee-container">
+          <div class="marquee-track">
+            {[...notes, ...notes].map((page) => {
+              const title =
+                page.frontmatter?.title ??
+                i18n(cfg.locale).propertyDefaults.title
+              const photo = page.frontmatter?.image || "/Resources/Root.jpg"
+
+              return (
+                <li class="recent-li marquee-item">
+                  <a
+                    class="image-container"
+                    href={resolveRelative(fileData.slug!, page.slug!)}
+                  >
+                    <img
+                      src={typeof photo === "string" ? photo : undefined}
+                      alt={title}
+                      height={190}
+                      width={325}
+                    />
+                    <div class="recent-title">{title}</div>
                   </a>
+
                   {page.dates && (
-                    <p class="">
-                      <Date date={getDate(cfg, page)!} locale={cfg.locale} />
+                    <p class="recent-date">
+                      <Date
+                        date={getDate(cfg, page)!}
+                        locale={cfg.locale}
+                      />
                     </p>
                   )}
-                  {opts.showTags && (
-                    <ul class="tags">
-                      {tags.map((tag) => (
-                        <li>
-                          <a
-                            class="internal tag-link"
-                            href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
-                          >
-                            {tag}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </li>
-            )
-          })}
+                </li>
+              )
+            })}
+          </div>
         </ul>
-        {opts.linkToMore && remaining > 0 && (
-          <p>
-            <a href={resolveRelative(fileData.slug!, opts.linkToMore)}>
-              {i18n(cfg.locale).components.recentNotes.seeRemainingMore({ remaining })}
-            </a>
-          </p>
-        )}
       </div>
     )
   }
 
-  RecentNotes.css = style + `
-.horizontal-ul {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
+  RecentNotes.css =
+    style +
+    `
+/* Container */
+.marquee-container {
+  position: relative;
+  overflow: hidden;
   padding: 0;
   list-style: none;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  scrollbar-width: thin;
 }
-.horizontal-li {
-  flex: 1 1 0;
-  min-width: 325px;
-  max-width: 400px;
-  border: 1px solid var(--darkgray);
+
+/* Moving strip */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+/* Individual card */
+.marquee-item {
+  flex: 0 0 auto;
+  width: 325px;
+  margin-right: 0.75rem;
+  background-color: var(--dark);
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
-.section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
+
+/* Image */
 .image-container {
   position: relative;
-  width: auto;
-  height: auto;
-}
-.image-container img {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
+
+.image-container img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+/* Title overlay */
 .recent-title {
   position: absolute;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  background: rgba(255,255,255,0.85);
+  right: 1rem;
+  bottom: 2rem;
+  background: rgba(232, 32, 32, 0.9);
+  color: white; /* Changed text-color to color */
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  font-weight: bold;
+  font-weight: 600;
   max-width: 90%;
   text-align: right;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+}
+
+/* Date */
+.recent-date {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--light);
+}
+
+/* Animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+/* Pause on hover */
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
 }
 `
+
   return RecentNotes
 }) satisfies QuartzComponentConstructor

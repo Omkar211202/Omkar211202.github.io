@@ -51,8 +51,8 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
         const tags = page.frontmatter?.tags ?? []
         const image = page.frontmatter?.image ?? "/Resources/Root.jpg"
         return (
-          <li class="section-li">
-          <a href={resolveRelative(fileData.slug!, page.slug!)}>
+            <li class="section-li">
+            <a href={resolveRelative(fileData.slug!, page.slug!)}>
             <div class="box">
               <div class="desc">
               <div class="cont">
@@ -60,45 +60,48 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
 
               <div class="bottom-right">{title}</div>
               {/* <ul class="tags bottom-down">
-                {tags.map((tag) => (
-                  <li>
-                    <a
-                      class="internal tag-link"
-                      href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
-                    >
-                      {tag}
-                    </a>
-                  </li>
-                ))}
+              {tags.map((tag) => (
+                <li>
+                <a
+                  class="internal tag-link"
+                  href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
+                >
+                  {tag}
+                </a>
+                </li>
+              ))}
               </ul> */}
               </div>
 
               <h2 class="title">
-                <a href={resolveRelative(fileData.slug!, page.slug!)} class="heading">
-                  {title}
-                </a>
+              <a href={resolveRelative(fileData.slug!, page.slug!)} class="heading">
+                {title}
+              </a>
               </h2>
               </div>              
 
 
               <ul class="tags">
-                {tags.map((tag) => (
-                  <li>
-                    <a
-                      class="internal tag-link"
-                      href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
-                    >
-                      {tag}
-                    </a>
-                  </li>
-                ))}
+              {tags.map((tag) => (
+                <li>
+                <a
+                  class="internal tag-link"
+                  href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
+                >
+                  {tag}
+                </a>
+                </li>
+              ))}
               </ul>
-              <p class="meta">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+              <ul class="tags" style="margin: 0;"></ul>
+              <p class="meta" style="background-color: var(--light); margin: 0;">
                 {page.dates && <Date date={getDate(cfg, page)!} locale={cfg.locale} />}
               </p>
+              </div>
             </div>
-          </a>
-          </li>
+            </a>
+            </li>
         )
       })}
     </ul>
@@ -137,7 +140,7 @@ PageList.css = `
   border: 3px solid var(--darkgray);
   border-radius: 0.5rem;
   padding: 0.5rem;
-  background-color: var(--light);
+  background-color: var(--dark);
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
@@ -151,14 +154,17 @@ PageList.css = `
 }
 
 .title {
-  text-sze: 32px;
+  text-size: 32px;
   margin: 0.1rem 0 0.1rem 0;
 }
 
 .meta {
   display: flex;
-  justify-content: flex-end;
   margin: 0.1rem 0 0.1rem 0;
+  background-color: var(--light);
+  width: fit-content;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.5rem;
 }
 
 .tags {
@@ -168,7 +174,6 @@ PageList.css = `
   flex-wrap: wrap;
   gap: 0.2rem;
   list-style: none;
-
 }
 
 .heading{

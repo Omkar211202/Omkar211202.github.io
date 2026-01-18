@@ -1,33 +1,24 @@
 ---
-title: Om's Notes
+title: Welcome !!!
 date:
   - 2024-10-27
 image: /Resources/Root.jpg
 ---
-## Welcome:
-
 Hey, Great to know you...
 
-This is a collection of my notes, thoughts and ideas across various things in life. Hope you enjoy reading some of the notes in this collection.
+I'm  [Omkar Kathi](https://www.linkedin.com/in/omkarkathi/), a student @ [SSSIHL]([Sri Sathya Sai Institute of Higher Learning (SSSIHL) – A modern Gurukula](https://www.sssihl.edu.in/)). I'm currently doing my [[MBA]] and alongside writing [[Actuarial]] exams from CAS, the US P&C actuarial body.
 
-Let direct you to different tangents you may want to look @:
-- Some [[Interesting!]] things revolving around Spirituality and Books I read.
-- [[MBA]] Covers core concepts for managers in Finance, Marketing, Operation and Analytics.
-- [[The Techie]]: AI/ML and Web Development
-- [[Research]]: Covers a systematic collection of concepts and tools in research.
+I love to read, [[Research]] and understand different phenomenon in this world. So, I thought why not make a system that helps me to relearn, revisit and share things I learn. Thus, I built this website.
 
-Well, a lots of thoughts are attached to  tags, use them to navigate.
+Do you wanna read something [[Interesting!]] like books about life, spirituality etc. ? There is a section for that.
 
-Well, I'm [Omkar Kathi](https://www.linkedin.com/in/omkarkathi/), Currently studying [[MBA]] along side [[Actuarial]] exams. I use this website to make a more accessible, everlasting set of notes that will aid me and others for future referencing.
+ [[The Techie]] in me likes to code, making websites, talking about AI, LLM's etc. I also explore things in the intersection of code and physics.
+
+Well, a lots of thoughts are attached to tags, use them to navigate.
 
 
-A Special thanks to [Hursh Gupta](https://www.linkedin.com/in/hgup/), whose conversations sparked interests in web development  and tech. A special thanks to him for introducing me to the static generator: [Quartz](https://quartz.jzhao.xyz/), over which this website is made.
-
-Try to share some pieces of information you probably like or you think you're friends probably may like.
 
 
-Thanking You,
-[Omkar Kathi](https://www.linkedin.com/in/omkarkathi/)
  
 
 ---
