@@ -111,9 +111,10 @@ export default ((userOpts?: Partial<Options>) => {
   flex: 0 0 auto;
   width: 325px;
   margin-right: 0.75rem;
-  background-color: var(--dark);
+  background-color: white;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  border: 1px solid black;
 }
 
 /* Image */
@@ -150,7 +151,7 @@ export default ((userOpts?: Partial<Options>) => {
 .recent-date {
   margin-top: 0.25rem;
   font-size: 0.85rem;
-  color: var(--light);
+  color: black;
 }
 
 /* Animation */

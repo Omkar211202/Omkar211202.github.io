@@ -79,7 +79,7 @@ a {
   &.internal {
     text-decoration: none;
     background-color: var(--highlight);
-    font-size: 1.05rem;
+    font-size: 0.9rem;
 
     &:has(> img) {
       background-color: transparent;
@@ -191,7 +191,7 @@ a {
       z-index: 1;
       grid-area: grid-sidebar-left;
       flex-direction: column;
-      background-color: var(--light);
+      background-color: var(--tertiary);
       margin-right: 20px;
       position: sticky;
       @media all and ($mobile) {
@@ -209,9 +209,7 @@ a {
       grid-area: grid-sidebar-right;
       margin-right: 0;
       flex-direction: column;
-      border-top-left-radius: 2rem;
-      border-bottom-left-radius: 2rem;
-      border: 2px solid var(--light);
+      border: 2px solid var(--tertiary);
       margin-left: 20px;
       padding: 0.5rem 0.5rem 0.5rem;
       @media all and ($mobile) {

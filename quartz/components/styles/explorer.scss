@@ -5,6 +5,11 @@
     // Shift page position when toggling Explorer on mobile.
     & > :not(.sidebar.left:has(.explorer)) {
       transition: transform 300ms ease-in-out;
+      width: 95%;
+      justify-self: center;
+      padding: 0.5rem;
+      background-color: var(--light);
+      border-radius: 0.5rem;
     }
     &.lock-scroll > :not(.sidebar.left:has(.explorer)) {
       transform: translateX(100dvw);
@@ -18,6 +23,7 @@
       background-color: var(--light);
       padding: 1rem 0 1rem 0;
       margin: 0;
+      justify-content: stretch;
     }
 
     .hide-until-loaded ~ .explorer-content {
@@ -30,7 +36,7 @@
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
-  background-color: var(--light);
+  background-color: var(--tertiary);      //below the explorer arrow
   min-height: 1.2rem;
   flex: 0 1 auto;
   &.collapsed {
@@ -92,7 +98,7 @@
 
 button.mobile-explorer,
 button.desktop-explorer {
-  background-color: var(--light);
+  background-color: var(--tertiary);  //explorer arrow of desktop
   border: none;
   text-align: left;
   cursor: pointer;
@@ -161,7 +167,7 @@ button.desktop-explorer {
   user-select: none;
 
   & div > a {
-    color: var(--secondary);
+    color: var(--dark);
     font-family: var(--headerFont);
     font-size: 0.95rem;
     font-weight: $semiBoldWeight;
@@ -170,7 +176,7 @@ button.desktop-explorer {
   }
 
   & div > a:hover {
-    color: var(--tertiary);
+    color: var(--light);
   }
 
   & div > button {

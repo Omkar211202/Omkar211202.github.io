@@ -63,10 +63,11 @@ export default ((opts?: Partial<BacklinksOptions>) => {
   overflow-y: hidden;
   white-space: nowrap;
   scrollbar-width: thin;
-  height: 35rem;
+  height: 50rem;
   border-radius: 0.5rem;
   padding: 5px;
   width: fit-content;
+  border: 0.5px solid var(--darkgray);
 }
 
 .image-cont {

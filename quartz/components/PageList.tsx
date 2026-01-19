@@ -87,6 +87,7 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
                 <a
                   class="internal tag-link"
                   href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
+                  style="background-color: black; color: white;"
                 >
                   {tag}
                 </a>
@@ -179,6 +180,7 @@ PageList.css = `
 .heading{
   text-decoration: none;
   background-color: yellow;
+  color: black;
   font-size: 1.5rem;}
 
 .cont{
