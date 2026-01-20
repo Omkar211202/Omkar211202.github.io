@@ -47,7 +47,6 @@ export default ((userOpts?: Partial<Options>) => {
     return (
       <div class={classNames(displayClass, "recent-notes")}>
         <h3>{opts.title ?? i18n(cfg.locale).components.recentNotes.title}</h3>
-
         <ul class="recent-ul marquee-container">
           <div class="marquee-track">
             {[...notes, ...notes].map((page) => {
