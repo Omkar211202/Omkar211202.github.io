@@ -12,7 +12,7 @@ I love to read, [[Research]] and understand different phenomenon in this world. 
 
 Do you wanna read something [[Interesting!]] like books about life, spirituality etc. ? There is a section for that.
 
- [[The Techie]] in me likes to code, making websites, talking about AI, LLM's etc. I also explore things in the intersection of code and physics.
+ [[The Techie]] in me likes to code, make websites, talk about AI, LLM's etc.
 
 Well, a lots of thoughts are attached to tags, use them to navigate.
 
