@@ -472,7 +472,7 @@ p_box+p_violin & theme(axis.text.x = element_text(angle=45))
 - Recall: $\dfrac{TP}{TP+FN}$, among the actually positive, how many are predicted correctly. $\dfrac{(1)}{(1+2)}$
 
 
-- F1-Score: $\dfrac{2.Precision.Recall}{Precision+Recall}$
+- F1-Score: $\dfrac{2.Precision.Recall}{Precision+Recall}$ ,
 
 ---
 
@@ -520,5 +520,4 @@ conf_matrix = confusionMatrix(as.factor(predicted_class),
 conf_matrix
 ```
 
-```pyt
-```
+

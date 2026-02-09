@@ -4,6 +4,10 @@ date:
   - 2026-02-27
 tags:
   - MBA
+  - MBA04
+image: /Resources/MBA.jpg
+keywords:
+description:
 ---
 ## Company Law:
 
@@ -40,5 +44,15 @@ Severe Liability in certain cases.
 - section 
 
 Section 6:
- overide Memorandum and articles
- 
+ override Memorandum and articles
+
+Case study:
+- PNB
+- Satyam Computers
+- Harshad Mehta
+- ILFS scandal
+- Kingfisher Airlines
+- Blusmart cabs
+
+
+
