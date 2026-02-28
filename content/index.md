@@ -6,6 +6,8 @@ image: /Resources/Root.jpg
 ---
 Hey, Great to know you...
 
+Sairam,
+
 I'm  [Omkar Kathi](https://www.linkedin.com/in/omkarkathi/), a student @ [SSSIHL](https://www.sssihl.edu.in/). I'm currently doing my [[MBA]] and alongside writing [[Actuarial]] exams from CAS, the US P&C actuarial body.
 
 I love to read, [[Research]] and understand different phenomenon in this world. So, I thought why not make a system that helps me to relearn, revisit and share things I learn. Thus, I built this website.
