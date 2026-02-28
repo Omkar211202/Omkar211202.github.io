@@ -18,7 +18,7 @@ const config: QuartzConfig = {
       tagId: "G-NTDFQPY9XY", // Replace with your Google Analytics tag ID
     },
     locale: "en-US",
-    baseUrl: "Omkar211202.github.io",
+    baseUrl: "omkar211202.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     keywords: "notes, personal knowledge base, Omkar, quartz",
