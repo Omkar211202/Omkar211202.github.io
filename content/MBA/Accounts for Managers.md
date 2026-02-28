@@ -7,8 +7,15 @@ tags:
   - MBA
 image: /Resources/MBA.jpg
 ---
+<div style="display: inline-flex; align-items: center; background: #f9f9f9; border: 1px solid #eee; padding: 4px 15px 4px 4px; border-radius: 30px; font-family: sans-serif; height: 50px; box-sizing: border-box;margin-top: 20px">
+    <img src="/Resources/photo.jpg" alt="Author" style="width: 44px; height: 44px; border-radius: 50%; object-fit: fit; margin-right: 10px; background: #ddd;">
+    <p style="font-size: 14px; font-weight: 600; color: #333; white-space: nowrap;">
+        Omkar Kathi.
+    </p>
+</div>
+
 ## Cashflow Stmt.
-### Formulas:
+### Formulae:
 $$
 COGS=Purchases+opening stock-closingstock.
 $$

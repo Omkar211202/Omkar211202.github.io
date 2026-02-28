@@ -18,8 +18,5 @@ Well, a lots of thoughts are attached to tags, use them to navigate.
 
 
 
-
- 
-
 ---
 
