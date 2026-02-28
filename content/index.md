@@ -16,7 +16,6 @@ Do you wanna read something [[Interesting!]] like books about life, spirituality
 
 Well, a lots of thoughts are attached to tags, use them to navigate.
 
-Good day..... from Omkar
 
 ---
 
